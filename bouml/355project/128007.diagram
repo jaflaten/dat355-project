@@ -1,0 +1,37 @@
+format 222
+
+classcanvas 128007 class_ref 131847 // Article
+  classdiagramsettings member_max_width 0 end
+  xyz 244 208 2000
+end
+classcanvas 128135 class_ref 131975 // Attachment
+  classdiagramsettings member_max_width 0 end
+  xyz 467 347 2000
+end
+classcanvas 128263 class_ref 132103 // Event
+  classdiagramsettings member_max_width 0 end
+  xyz 309 513 2000
+end
+classcanvas 128391 class_ref 132231 // Messages
+  classdiagramsettings member_max_width 0 end
+  xyz 97 462 2000
+end
+classcanvas 128519 class_ref 132359 // Role
+  classdiagramsettings member_max_width 0 end
+  xyz 178 674 2000
+end
+classcanvas 128647 class_ref 132487 // Song
+  classdiagramsettings member_max_width 0 end
+  xyz 483 135 2000
+end
+classcanvas 128775 class_ref 132615 // User
+  classdiagramsettings member_max_width 0 end
+  xyz 497 590 2000
+end
+relationcanvas 129031 relation_ref 145799 // <association>
+  from ref 128391 z 2001 to point 235 573
+  line 129159 z 2001 to ref 128263
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+end

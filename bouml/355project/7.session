@@ -1,0 +1,19 @@
+window_sizes 3440 1417 806 2629 1267 104
+
+diagrams
+  classdiagram_ref 128007 // entities
+    725 1006 100 A4 0 0
+  active  sequencediagram_ref 128135 // sequence of something
+    725 1006 100 A4 0 0
+end
+show_stereotypes
+selected class_ref 131079 // EditController
+open
+  deploymentview_ref 128647 // Controller
+  class_ref 131207 // LoginController
+  classview_ref 128775 // Repository
+  deploymentview_ref 128903 // Entity
+  classview_ref 128903 // Entity
+  classview_ref 135815 // 355classview
+end
+end

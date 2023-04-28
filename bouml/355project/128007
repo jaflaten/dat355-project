@@ -1,0 +1,69 @@
+format 222
+"bakalarka" // bakalarka
+  revision 4
+  modified_by 7 "Mehbeh"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  ncouples 1
+  key "Stereotype" value "php"
+  package_ref 134535 // bakalarka
+
+  package_ref 134919 // unknown
+
+  classview 135815 "355classview"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 128007 "entities"
+      classdiagramsettings draw_all_relations no member_max_width 0 end
+      size A4
+    end
+
+    sequencediagram 128135 "sequence of something"
+      sequencediagramsettings end
+      overlapping_bars size A4
+    end
+  end
+end

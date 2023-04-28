@@ -1,0 +1,263 @@
+format 222
+"Type" // foo::bakalarka::src::Type
+  revision 1
+  modified_by 7 "Mehbeh"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  php_dir "E:\\dev\\bakalarka/src/Type/"
+  php_namespace "App\\Type"
+  deploymentview 137479 "Type"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 147463 "EventType"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use App\\Entity\\Event;
+use App\\Entity\\Song;
+use App\\Entity\\User;
+use Symfony\\Bridge\\Doctrine\\Form\\Type\\EntityType;
+use Symfony\\Component\\Form\\AbstractType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\DateTimeType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\DateType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\TimeType;
+use Symfony\\Component\\Form\\FormBuilderInterface;
+use Symfony\\Component\\OptionsResolver\\OptionsResolver;
+use Symfony\\Component\\Validator\\Constraints\\Date;
+use Symfony\\Component\\Validator\\Constraints\\DateTime;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 149639 // EventType
+      end
+    end
+
+    artifact 147591 "RoleType"
+      stereotype "source"
+      php_src "<?php
+
+namespace App\\Type;
+
+use App\\Entity\\Role;
+use App\\Entity\\User;
+
+use Doctrine\\ORM\\EntityManagerInterface;
+use Symfony\\Bridge\\Doctrine\\Form\\Type\\EntityType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\CollectionType;
+use Symfony\\Component\\Form\\AbstractType;
+use Symfony\\Component\\Form\\FormBuilderInterface;
+use Symfony\\Component\\OptionsResolver\\OptionsResolver;
+"
+      associated_elems
+      end
+    end
+
+    artifact 147719 "SongType"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use App\\Entity\\Event;
+use App\\Entity\\Song;
+use App\\Entity\\User;
+use Symfony\\Bridge\\Doctrine\\Form\\Type\\EntityType;
+use Symfony\\Component\\Form\\AbstractType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\DateTimeType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\DateType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\NumberType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\TimeType;
+use Symfony\\Component\\Form\\FormBuilderInterface;
+use Symfony\\Component\\OptionsResolver\\OptionsResolver;
+use Symfony\\Component\\Validator\\Constraints\\Date;
+use Symfony\\Component\\Validator\\Constraints\\DateTime;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 149895 // SongType
+      end
+    end
+  end
+
+  classview 137223 "Type"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 149639 "EventType"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 145287 // <generalisation>
+	relation 145287 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 145287 // <generalisation>
+	  b parent class_ref 147847 // AbstractType
+      end
+
+      operation 164871 "buildForm"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "builder" explicit_type "FormBuilderInterface"
+	  param in name "options" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, array ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 164999 "configureOptions"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "resolver" explicit_type "OptionsResolver"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 149767 "RoleType"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 145415 // <generalisation>
+	relation 145415 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 145415 // <generalisation>
+	  b parent class_ref 147847 // AbstractType
+      end
+    end
+
+    class 149895 "SongType"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 145543 // <generalisation>
+	relation 145543 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 145543 // <generalisation>
+	  b parent class_ref 147847 // AbstractType
+      end
+
+      operation 165127 "buildForm"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "builder" explicit_type "FormBuilderInterface"
+	  param in name "options" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, array ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 165255 "configureOptions"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "resolver" explicit_type "OptionsResolver"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+  end
+end

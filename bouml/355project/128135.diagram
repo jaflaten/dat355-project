@@ -1,0 +1,7 @@
+format 222
+
+classinstance 128007 class_ref 131335 // RegistrationController
+  name ""   xyz 81 4 2000 life_line_z 2000
+classinstance 128135 class_ref 135047 // UserRepository
+  name ""   xyz 562 4 2000 life_line_z 2000
+end

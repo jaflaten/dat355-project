@@ -1,0 +1,53 @@
+format 222
+"public" // foo::bakalarka::public
+  revision 1
+  modified_by 7 "Mehbeh"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  php_dir "E:\\dev\\bakalarka/public/"
+  deploymentview 136327 "public"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 143495 "index"
+      stereotype "source"
+      php_src "<?php
+
+use App\\Kernel;
+
+require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
+
+return function (array $context) {
+    return new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);
+}"
+      associated_elems
+      end
+    end
+  end
+end

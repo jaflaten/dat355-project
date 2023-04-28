@@ -1,0 +1,29 @@
+class EventRepository
+!!!140039.php!!!	__construct(in registry : ManagerRegistry)
+        parent::__construct($registry, Event::class);
+!!!140167.php!!!	add(in entity : Event, in flush : bool = true) : void
+        $this->_em->persist($entity);
+        if ($flush) {
+            $this->_em->flush();
+        }
+!!!140295.php!!!	remove(in entity : Event, in flush : bool = true) : void
+        $this->_em->remove($entity);
+        if ($flush) {
+            $this->_em->flush();
+        }
+!!!140423.php!!!	findNewerThan(in date : , in sort : , in order :  = null) : Event[]
+        return $this->createQueryBuilder('e')
+            ->andWhere('e.date >= :date')
+            ->setParameter('date', $date)
+            ->orderBy('e.' . $sort, $order)
+            ->getQuery()
+            ->getResult()
+        ;
+!!!140551.php!!!	findOlderThan(in date : , in sort : , in order :  = null) : Event[]
+        return $this->createQueryBuilder('e')
+            ->andWhere('e.date < :date')
+            ->setParameter('date', $date)
+            ->orderBy('e.' . $sort, $order)
+            ->getQuery()
+            ->getResult()
+            ;

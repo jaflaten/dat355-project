@@ -1,0 +1,1404 @@
+format 222
+"migrations" // bakalarka::bakalarka::migrations
+  revision 1
+  modified_by 7 "Mehbeh"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  php_dir "E:\\dev\\bakalarka/migrations/"
+  php_namespace "DoctrineMigrations"
+  deploymentview 128135 "migrations"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 128263 "Version20220309143315"
+      stereotype "source"
+      php_src "<?php
+
+declare(strict_types=1);
+
+${namespace}
+
+use Doctrine\\DBAL\\Schema\\Schema;
+use Doctrine\\Migrations\\AbstractMigration;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 128007 // Version20220309143315
+      end
+    end
+
+    artifact 128391 "Version20220312105132"
+      stereotype "source"
+      php_src "<?php
+
+declare(strict_types=1);
+
+${namespace}
+
+use Doctrine\\DBAL\\Schema\\Schema;
+use Doctrine\\Migrations\\AbstractMigration;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 128263 // Version20220312105132
+      end
+    end
+
+    artifact 128519 "Version20220401131945"
+      stereotype "source"
+      php_src "<?php
+
+declare(strict_types=1);
+
+${namespace}
+
+use Doctrine\\DBAL\\Schema\\Schema;
+use Doctrine\\Migrations\\AbstractMigration;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 128391 // Version20220401131945
+      end
+    end
+
+    artifact 128647 "Version20220403154426"
+      stereotype "source"
+      php_src "<?php
+
+declare(strict_types=1);
+
+${namespace}
+
+use Doctrine\\DBAL\\Schema\\Schema;
+use Doctrine\\Migrations\\AbstractMigration;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 128519 // Version20220403154426
+      end
+    end
+
+    artifact 128775 "Version20220403155136"
+      stereotype "source"
+      php_src "<?php
+
+declare(strict_types=1);
+
+${namespace}
+
+use Doctrine\\DBAL\\Schema\\Schema;
+use Doctrine\\Migrations\\AbstractMigration;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 128647 // Version20220403155136
+      end
+    end
+
+    artifact 128903 "Version20220406152702"
+      stereotype "source"
+      php_src "<?php
+
+declare(strict_types=1);
+
+${namespace}
+
+use Doctrine\\DBAL\\Schema\\Schema;
+use Doctrine\\Migrations\\AbstractMigration;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 128775 // Version20220406152702
+      end
+    end
+
+    artifact 129031 "Version20220427170146"
+      stereotype "source"
+      php_src "<?php
+
+declare(strict_types=1);
+
+${namespace}
+
+use Doctrine\\DBAL\\Schema\\Schema;
+use Doctrine\\Migrations\\AbstractMigration;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 128903 // Version20220427170146
+      end
+    end
+
+    artifact 129159 "Version20220429104952"
+      stereotype "source"
+      php_src "<?php
+
+declare(strict_types=1);
+
+${namespace}
+
+use Doctrine\\DBAL\\Schema\\Schema;
+use Doctrine\\Migrations\\AbstractMigration;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 129031 // Version20220429104952
+      end
+    end
+
+    artifact 129287 "Version20220429110645"
+      stereotype "source"
+      php_src "<?php
+
+declare(strict_types=1);
+
+${namespace}
+
+use Doctrine\\DBAL\\Schema\\Schema;
+use Doctrine\\Migrations\\AbstractMigration;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 129159 // Version20220429110645
+      end
+    end
+
+    artifact 129415 "Version20220904134431"
+      stereotype "source"
+      php_src "<?php
+
+declare(strict_types=1);
+
+${namespace}
+
+use Doctrine\\DBAL\\Schema\\Schema;
+use Doctrine\\Migrations\\AbstractMigration;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 129287 // Version20220904134431
+      end
+    end
+
+    artifact 129543 "Version20220913091747"
+      stereotype "source"
+      php_src "<?php
+
+declare(strict_types=1);
+
+${namespace}
+
+use Doctrine\\DBAL\\Schema\\Schema;
+use Doctrine\\Migrations\\AbstractMigration;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 129415 // Version20220913091747
+      end
+    end
+
+    artifact 129671 "Version20220913105750"
+      stereotype "source"
+      php_src "<?php
+
+declare(strict_types=1);
+
+${namespace}
+
+use Doctrine\\DBAL\\Schema\\Schema;
+use Doctrine\\Migrations\\AbstractMigration;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 129543 // Version20220913105750
+      end
+    end
+
+    artifact 129799 "Version20220913105912"
+      stereotype "source"
+      php_src "<?php
+
+declare(strict_types=1);
+
+${namespace}
+
+use Doctrine\\DBAL\\Schema\\Schema;
+use Doctrine\\Migrations\\AbstractMigration;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 129671 // Version20220913105912
+      end
+    end
+
+    artifact 129927 "Version20220913111814"
+      stereotype "source"
+      php_src "<?php
+
+declare(strict_types=1);
+
+${namespace}
+
+use Doctrine\\DBAL\\Schema\\Schema;
+use Doctrine\\Migrations\\AbstractMigration;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 129799 // Version20220913111814
+      end
+    end
+
+    artifact 130055 "Version20221207204150"
+      stereotype "source"
+      php_src "<?php
+
+declare(strict_types=1);
+
+${namespace}
+
+use Doctrine\\DBAL\\Schema\\Schema;
+use Doctrine\\Migrations\\AbstractMigration;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 129927 // Version20221207204150
+      end
+    end
+
+    artifact 130183 "Version20230216114645"
+      stereotype "source"
+      php_src "<?php
+
+declare(strict_types=1);
+
+${namespace}
+
+use Doctrine\\DBAL\\Schema\\Schema;
+use Doctrine\\Migrations\\AbstractMigration;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 130055 // Version20230216114645
+      end
+    end
+  end
+
+  classview 128007 "migrations"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 128007 "Version20220309143315"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_final php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+Auto-generated Migration: Please modify to your needs!
+"
+      classrelation 128007 // <generalisation>
+	relation 128007 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128007 // <generalisation>
+	  b parent class_ref 128135 // AbstractMigration
+      end
+
+      operation 128007 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 128135 "up"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 128263 "down"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 128263 "Version20220312105132"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_final php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+Auto-generated Migration: Please modify to your needs!
+"
+      classrelation 128135 // <generalisation>
+	relation 128135 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128135 // <generalisation>
+	  b parent class_ref 128135 // AbstractMigration
+      end
+
+      operation 128391 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 128519 "up"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 128647 "down"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 128391 "Version20220401131945"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_final php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+Auto-generated Migration: Please modify to your needs!
+"
+      classrelation 128263 // <generalisation>
+	relation 128263 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128263 // <generalisation>
+	  b parent class_ref 128135 // AbstractMigration
+      end
+
+      operation 128775 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 128903 "up"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 129031 "down"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 128519 "Version20220403154426"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_final php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+Auto-generated Migration: Please modify to your needs!
+"
+      classrelation 128391 // <generalisation>
+	relation 128391 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128391 // <generalisation>
+	  b parent class_ref 128135 // AbstractMigration
+      end
+
+      operation 129159 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 129287 "up"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 129415 "down"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 128647 "Version20220403155136"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_final php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+Auto-generated Migration: Please modify to your needs!
+"
+      classrelation 128519 // <generalisation>
+	relation 128519 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128519 // <generalisation>
+	  b parent class_ref 128135 // AbstractMigration
+      end
+
+      operation 129543 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 129671 "up"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 129799 "down"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 128775 "Version20220406152702"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_final php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+Auto-generated Migration: Please modify to your needs!
+"
+      classrelation 128647 // <generalisation>
+	relation 128647 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128647 // <generalisation>
+	  b parent class_ref 128135 // AbstractMigration
+      end
+
+      operation 129927 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 130055 "up"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 130183 "down"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 128903 "Version20220427170146"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_final php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+Auto-generated Migration: Please modify to your needs!
+"
+      classrelation 128775 // <generalisation>
+	relation 128775 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128775 // <generalisation>
+	  b parent class_ref 128135 // AbstractMigration
+      end
+
+      operation 130311 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 130439 "up"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 130567 "down"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129031 "Version20220429104952"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_final php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+Auto-generated Migration: Please modify to your needs!
+"
+      classrelation 128903 // <generalisation>
+	relation 128903 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128903 // <generalisation>
+	  b parent class_ref 128135 // AbstractMigration
+      end
+
+      operation 130695 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 130823 "up"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 130951 "down"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129159 "Version20220429110645"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_final php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+Auto-generated Migration: Please modify to your needs!
+"
+      classrelation 129031 // <generalisation>
+	relation 129031 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 129031 // <generalisation>
+	  b parent class_ref 128135 // AbstractMigration
+      end
+
+      operation 131079 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 131207 "up"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 131335 "down"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129287 "Version20220904134431"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_final php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+Auto-generated Migration: Please modify to your needs!
+"
+      classrelation 129159 // <generalisation>
+	relation 129159 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 129159 // <generalisation>
+	  b parent class_ref 128135 // AbstractMigration
+      end
+
+      operation 131463 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 131591 "up"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 131719 "down"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129415 "Version20220913091747"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_final php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+Auto-generated Migration: Please modify to your needs!
+"
+      classrelation 129287 // <generalisation>
+	relation 129287 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 129287 // <generalisation>
+	  b parent class_ref 128135 // AbstractMigration
+      end
+
+      operation 131847 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 131975 "up"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 132103 "down"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129543 "Version20220913105750"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_final php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+Auto-generated Migration: Please modify to your needs!
+"
+      classrelation 129415 // <generalisation>
+	relation 129415 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 129415 // <generalisation>
+	  b parent class_ref 128135 // AbstractMigration
+      end
+
+      operation 132231 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 132359 "up"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 132487 "down"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129671 "Version20220913105912"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_final php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+Auto-generated Migration: Please modify to your needs!
+"
+      classrelation 129543 // <generalisation>
+	relation 129543 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 129543 // <generalisation>
+	  b parent class_ref 128135 // AbstractMigration
+      end
+
+      operation 132615 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 132743 "up"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 132871 "down"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129799 "Version20220913111814"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_final php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+Auto-generated Migration: Please modify to your needs!
+"
+      classrelation 129671 // <generalisation>
+	relation 129671 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 129671 // <generalisation>
+	  b parent class_ref 128135 // AbstractMigration
+      end
+
+      operation 132999 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 133127 "up"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 133255 "down"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129927 "Version20221207204150"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_final php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+Auto-generated Migration: Please modify to your needs!
+"
+      classrelation 129799 // <generalisation>
+	relation 129799 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 129799 // <generalisation>
+	  b parent class_ref 128135 // AbstractMigration
+      end
+
+      operation 133383 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 133511 "up"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 133639 "down"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 130055 "Version20230216114645"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_final php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+Auto-generated Migration: Please modify to your needs!
+"
+      classrelation 129927 // <generalisation>
+	relation 129927 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 129927 // <generalisation>
+	  b parent class_ref 128135 // AbstractMigration
+      end
+
+      operation 133767 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 133895 "up"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 134023 "down"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "schema" explicit_type "Schema"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+  end
+end

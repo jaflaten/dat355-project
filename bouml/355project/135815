@@ -1,0 +1,936 @@
+format 222
+"Entity" // bakalarka::bakalarka::src::Entity
+  revision 2
+  modified_by 7 "Mehbeh"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  php_dir "E:\\dev\\bakalarka/src/Entity/"
+  php_namespace "App\\Entity"
+  deploymentview 128903 "Entity"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 131463 "Article"
+      stereotype "source"
+      php_src "<?php
+
+namespace App\\Entity;
+
+use App\\Repository\\ArticleRepository;
+use DateTimeInterface;
+use Doctrine\\ORM\\Mapping as ORM;
+"
+      associated_elems
+      end
+    end
+
+    artifact 131591 "Attachment"
+      stereotype "source"
+      php_src "<?php
+
+namespace App\\Entity;
+
+use App\\Repository\\AttachmentRepository;
+use Doctrine\\ORM\\Mapping as ORM;
+"
+      associated_elems
+      end
+    end
+
+    artifact 131719 "Event"
+      stereotype "source"
+      php_src "<?php
+
+namespace App\\Entity;
+
+use App\\Repository\\EventRepository;
+use DateTimeInterface;
+use Doctrine\\Common\\Collections\\ArrayCollection;
+use Doctrine\\Common\\Collections\\Collection;
+use Doctrine\\ORM\\Mapping as ORM;
+"
+      associated_elems
+      end
+    end
+
+    artifact 131847 "Messages"
+      stereotype "source"
+      php_src "<?php
+
+namespace App\\Entity;
+
+use App\\Repository\\MessagesRepository;
+use Doctrine\\ORM\\Mapping as ORM;
+"
+      associated_elems
+      end
+    end
+
+    artifact 131975 "Role"
+      stereotype "source"
+      php_src "<?php
+
+namespace App\\Entity;
+
+use App\\Repository\\RoleRepository;
+use Doctrine\\Common\\Collections\\ArrayCollection;
+use Doctrine\\Common\\Collections\\Collection;
+use Doctrine\\ORM\\Mapping as ORM;
+"
+      associated_elems
+      end
+    end
+
+    artifact 132103 "Song"
+      stereotype "source"
+      php_src "<?php
+
+namespace App\\Entity;
+
+use App\\Repository\\SongRepository;
+use Doctrine\\Common\\Collections\\ArrayCollection;
+use Doctrine\\Common\\Collections\\Collection;
+use Doctrine\\ORM\\Mapping as ORM;
+"
+      associated_elems
+      end
+    end
+
+    artifact 132231 "User"
+      stereotype "source"
+      php_src "<?php
+
+namespace App\\Entity;
+
+use App\\Repository\\UserRepository;
+use ContainerEoQ5qRB\\getRoleRepositoryService;
+use Doctrine\\Common\\Collections\\ArrayCollection;
+use Doctrine\\Common\\Collections\\Collection;
+use Doctrine\\ORM\\EntityManagerInterface;
+use Doctrine\\ORM\\Mapping as ORM;
+use SebastianBergmann\\CodeCoverage\\Report\\PHP;
+use Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity;
+use Symfony\\Component\\Security\\Core\\User\\PasswordAuthenticatedUserInterface;
+use Symfony\\Component\\Security\\Core\\User\\UserInterface;
+use function PHPUnit\\Framework\\isEmpty;
+"
+      associated_elems
+      end
+    end
+  end
+
+  classview 128903 "Entity"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 131847 "Article"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "[ORM\\Entity(repositoryClass: ArticleRepository::class)]"
+      attribute 128135 "id"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Id]
+[ORM\\GeneratedValue]
+[ORM\\Column(type: 'integer')]"
+      end
+
+      attribute 128263 "title"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'string', length: 255, nullable: true)]"
+      end
+
+      attribute 128391 "content"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'string', length: 10000)]"
+      end
+
+      attribute 128519 "published"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'datetime')]"
+      end
+
+      attribute 128647 "lastEdited"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'datetime')]"
+      end
+
+      attribute 128775 "author"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\ManyToOne(targetEntity: User::class, inversedBy: 'articles')]
+[ORM\\JoinColumn(nullable: false)]"
+      end
+
+      attribute 128903 "page"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'string', length: 255, nullable: true)]"
+      end
+
+      operation 136199 "getId"
+	public explicit_return_type "?"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 131975 "Attachment"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "[ORM\\Entity(repositoryClass: AttachmentRepository::class)]"
+      attribute 129031 "id"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Id]
+[ORM\\GeneratedValue]
+[ORM\\Column(type: 'integer')]"
+      end
+
+      attribute 129159 "name"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'string', length: 255, nullable: true)]"
+      end
+
+      attribute 129287 "type"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'integer', nullable: true)]"
+      end
+
+      attribute 129415 "link"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'string', length: 255, nullable: true)]"
+      end
+
+      attribute 129543 "song"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\ManyToOne(targetEntity: Song::class, inversedBy: 'attachments')]
+[ORM\\JoinColumn(nullable: false)]"
+      end
+
+      operation 136327 "getId"
+	public explicit_return_type "?"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 132103 "Event"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "[ORM\\Entity(repositoryClass: EventRepository::class)]"
+      attribute 129671 "id"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Id]
+[ORM\\GeneratedValue(strategy: 'AUTO')]
+[ORM\\Column(type: 'integer')]"
+      end
+
+      attribute 129799 "name"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'string', length: 255, nullable: true)]"
+      end
+
+      attribute 129927 "date"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'datetime', nullable: true)]"
+      end
+
+      attribute 130055 "location"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'string', length: 255, nullable: true)]"
+      end
+
+      attribute 130183 "users"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\ManyToMany(targetEntity: User::class, inversedBy: 'events')]"
+      end
+
+      attribute 130311 "songs"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\ManyToMany(targetEntity: Song::class, inversedBy: 'events')]"
+      end
+
+      attribute 130439 "programmeLink"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'string', length: 255, nullable: true)]"
+      end
+
+      attribute 130567 "invitationLink"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'string', length: 255, nullable: true)]"
+      end
+
+      attribute 130695 "notePublic"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'text', nullable: true)]"
+      end
+
+      attribute 130823 "notePrivate"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'text', nullable: true)]"
+      end
+
+      attribute 130951 "timeBegin"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'datetime', nullable: true)]"
+      end
+
+      attribute 131079 "timeMeet"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'datetime', nullable: true)]"
+      end
+
+      operation 136455 "__construct"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 136583 "getId"
+	public explicit_return_type "?"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 145927 // <association>
+	relation_ref 145799 // <association>
+      end
+    end
+
+    class 132231 "Messages"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "[ORM\\Entity(repositoryClass: MessagesRepository::class)]"
+      attribute 131207 "id"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Id]
+[ORM\\GeneratedValue]
+[ORM\\Column(type: 'integer')]"
+      end
+
+      attribute 131335 "locale"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'string', length: 255)]"
+      end
+
+      attribute 131463 "page"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'string', length: 255, nullable: true)]"
+      end
+
+      attribute 131591 "messageId"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'string', length: 255)]"
+      end
+
+      attribute 131719 "messageText"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'text', nullable: true)]"
+      end
+
+      operation 136711 "getId"
+	public explicit_return_type "?"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 145671 // <generalisation>
+	relation 145671 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 145671 // <generalisation>
+	  b multiplicity "*" parent class_ref 132103 // Event
+      end
+
+      classrelation 145799 // <association>
+	relation 145799 ----
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 145799 // <association>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 145927 // <association>
+	  association_explicit_type "1..*"
+      end
+    end
+
+    class 132359 "Role"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "[ORM\\Entity(repositoryClass: RoleRepository::class)]"
+      attribute 131847 "id"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Id]
+[ORM\\GeneratedValue]
+[ORM\\Column(type: 'integer')]"
+      end
+
+      attribute 131975 "name"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'string', length: 255)]"
+      end
+
+      attribute 132103 "users"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\ManyToMany(targetEntity: User::class, mappedBy: 'groups')]"
+      end
+
+      operation 136839 "__construct"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "    #[ORM\\OneToMany(mappedBy: 'roles', targetEntity: User::class)]
+    private $users;"
+      end
+
+      operation 136967 "getId"
+	public explicit_return_type "?"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 132487 "Song"
+      visibility package stereotype "php"
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "[ORM\\Entity(repositoryClass: SongRepository::class)]"
+      attribute 132231 "id"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Id]
+[ORM\\GeneratedValue]
+[ORM\\Column(type: 'integer')]"
+      end
+
+      attribute 132359 "number"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'integer', nullable: true)]"
+      end
+
+      attribute 132487 "name"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'string', length: 255, nullable: true)]"
+      end
+
+      attribute 132615 "attachments"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\OneToMany(mappedBy: 'song', targetEntity: Attachment::class, orphanRemoval: true)]"
+      end
+
+      attribute 132743 "author"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\Column(type: 'string', length: 255, nullable: true)]"
+      end
+
+      attribute 132871 "events"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "[ORM\\ManyToMany(targetEntity: Event::class, mappedBy: 'songs')]"
+      end
+
+      operation 137095 "__construct"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 137223 "getId"
+	public explicit_return_type "?"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 132615 "User"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "[ORM\\Entity(repositoryClass: UserRepository::class)]
+[ORM\\Table(name: '`user`')]
+[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]"
+      classrelation 131079 // <realization>
+	relation 131079 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 131079 // <realization>
+	  b parent class_ref 132743 // UserInterface
+      end
+
+      classrelation 131207 // <realization>
+	relation 131207 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 131207 // <realization>
+	  b parent class_ref 132871 // PasswordAuthenticatedUserInterface
+      end
+    end
+  end
+end

@@ -1,0 +1,43 @@
+format 222
+"bakalarka" // bakalarka::bakalarka
+  revision 1
+  modified_by 7 "Mehbeh"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  php_dir "E:\\dev\\bakalarka/"
+  package_ref 134663 // config
+
+  package_ref 134791 // migrations
+
+  package_ref 135047 // public
+
+  package_ref 135175 // src
+
+  package_ref 136327 // tests
+end

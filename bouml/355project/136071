@@ -1,0 +1,181 @@
+format 222
+"Security" // bakalarka::bakalarka::src::Security
+  revision 1
+  modified_by 7 "Mehbeh"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  php_dir "E:\\dev\\bakalarka/src/Security/"
+  php_namespace "App\\Security"
+  deploymentview 129287 "Security"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 134151 "EmailVerifier"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use Doctrine\\ORM\\EntityManagerInterface;
+use Symfony\\Bridge\\Twig\\Mime\\TemplatedEmail;
+use Symfony\\Component\\HttpFoundation\\Request;
+use Symfony\\Component\\Mailer\\MailerInterface;
+use Symfony\\Component\\Security\\Core\\User\\UserInterface;
+use SymfonyCasts\\Bundle\\VerifyEmail\\Exception\\VerifyEmailExceptionInterface;
+use SymfonyCasts\\Bundle\\VerifyEmail\\VerifyEmailHelperInterface;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 135303 // EmailVerifier
+      end
+    end
+  end
+
+  classview 129159 "Security"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 135303 "EmailVerifier"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 132999 "verifyEmailHelper"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 133127 "mailer"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 133255 "entityManager"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 142599 "__construct"
+	public explicit_return_type ""
+	nparams 3
+	  param in name "helper" explicit_type "VerifyEmailHelperInterface"
+	  param in name "mailer" explicit_type "MailerInterface"
+	  param in name "manager" explicit_type "EntityManagerInterface"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}, ${t2} ${p2}${v2}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 142727 "sendEmailConfirmation"
+	public explicit_return_type "void"
+	nparams 3
+	  param in name "verifyEmailRouteName" explicit_type "string"
+	  param in name "user" type class_ref 132743 // UserInterface
+	  param in name "email" explicit_type "TemplatedEmail"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}, ${t2} ${p2}${v2}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 142855 "handleEmailConfirmation"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "request" explicit_type "Request"
+	  param in name "user" type class_ref 132743 // UserInterface
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@throws VerifyEmailExceptionInterface
+"
+      end
+    end
+  end
+end

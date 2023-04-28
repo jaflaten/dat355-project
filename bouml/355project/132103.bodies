@@ -1,0 +1,4 @@
+class Event
+!!!136455.php!!!	__construct()
+        $this->users = new ArrayCollection();
+        $this->songs = new ArrayCollection();

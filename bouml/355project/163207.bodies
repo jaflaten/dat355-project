@@ -1,0 +1,12 @@
+class TextTypeExtension
+!!!183943.php!!!	buildView(in view : FormView, in form : FormInterface, in options : array)
+        if (isset($options['bulma_icon'])) {
+            $view->vars['bulma_icon'] = $options['bulma_icon'];
+        }
+!!!184071.php!!!	configureOptions(in resolver : OptionsResolver)
+        $resolver->setDefined('bulma_icon');
+        $resolver->setAllowedTypes('bulma_icon', 'array');
+!!!184199.php!!!	getExtendedType() : string
+        return TextType::class;
+!!!184327.php!!!	getExtendedTypes() : iterable
+        return [TextType::class];

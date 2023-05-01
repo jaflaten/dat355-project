@@ -1,0 +1,4 @@
+class Song
+!!!181895.php!!!	__construct()
+        $this->attachments = new ArrayCollection();
+        $this->events = new ArrayCollection();

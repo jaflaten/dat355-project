@@ -1,0 +1,3 @@
+class Role
+!!!181639.php!!!	__construct()
+        $this->users = new ArrayCollection();

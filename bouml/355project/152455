@@ -1,0 +1,955 @@
+format 222
+"Repository" // foo::bakalarka::src::Repository
+  revision 1
+  modified_by 7 "Mehbeh"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  php_dir "E:\\dev\\bakalarka/src/Repository/"
+  php_namespace "App\\Repository"
+  classview 144519 "Repository"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 160519 "MessagesRepository"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@method Messages|null find($id, $lockMode = null, $lockVersion = null)
+@method Messages|null findOneBy(array $criteria, array $orderBy = null)
+@method Messages[]    findAll()
+@method Messages[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+"
+      classrelation 157959 // <generalisation>
+	relation 157831 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 157959 // <generalisation>
+	  b parent class_ref 163847 // ServiceEntityRepository
+      end
+
+      operation 186375 "__construct"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "registry" explicit_type "ManagerRegistry"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 186503 "add"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "entity" type class_ref 161031 // Messages
+	  param in name "flush" explicit_type "bool"
+	    defaultvalue "true"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@throws ORMException
+@throws OptimisticLockException
+"
+      end
+
+      operation 186631 "remove"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "entity" type class_ref 161031 // Messages
+	  param in name "flush" explicit_type "bool"
+	    defaultvalue "true"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@throws ORMException
+@throws OptimisticLockException
+"
+      end
+    end
+
+    class 163719 "ArticleRepository"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@method Article|null find($id, $lockMode = null, $lockVersion = null)
+@method Article|null findOneBy(array $criteria, array $orderBy = null)
+@method Article[]    findAll()
+@method Article[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+"
+      classrelation 157575 // <generalisation>
+	relation 157447 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 157575 // <generalisation>
+	  b parent class_ref 163847 // ServiceEntityRepository
+      end
+
+      operation 184967 "__construct"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "registry" explicit_type "ManagerRegistry"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 185095 "add"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "entity" type class_ref 160647 // Article
+	  param in name "flush" explicit_type "bool"
+	    defaultvalue "true"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@throws ORMException
+@throws OptimisticLockException
+"
+      end
+
+      operation 185223 "remove"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "entity" type class_ref 160647 // Article
+	  param in name "flush" explicit_type "bool"
+	    defaultvalue "true"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@throws ORMException
+@throws OptimisticLockException
+"
+      end
+    end
+
+    class 163975 "AttachmentRepository"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@method Attachment|null find($id, $lockMode = null, $lockVersion = null)
+@method Attachment|null findOneBy(array $criteria, array $orderBy = null)
+@method Attachment[]    findAll()
+@method Attachment[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+"
+      classrelation 157703 // <generalisation>
+	relation 157575 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 157703 // <generalisation>
+	  b parent class_ref 163847 // ServiceEntityRepository
+      end
+
+      operation 185351 "__construct"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "registry" explicit_type "ManagerRegistry"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 185479 "add"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "entity" type class_ref 160775 // Attachment
+	  param in name "flush" explicit_type "bool"
+	    defaultvalue "true"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@throws ORMException
+@throws OptimisticLockException
+"
+      end
+
+      operation 185607 "remove"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "entity" type class_ref 160775 // Attachment
+	  param in name "flush" explicit_type "bool"
+	    defaultvalue "true"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@throws ORMException
+@throws OptimisticLockException
+"
+      end
+    end
+
+    class 164103 "EventRepository"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@method Event|null find($id, $lockMode = null, $lockVersion = null)
+@method Event|null findOneBy(array $criteria, array $orderBy = null)
+@method Event[]    findAll()
+@method Event[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+"
+      classrelation 157831 // <generalisation>
+	relation 157703 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 157831 // <generalisation>
+	  b parent class_ref 163847 // ServiceEntityRepository
+      end
+
+      operation 185735 "__construct"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "registry" explicit_type "ManagerRegistry"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 185863 "add"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "entity" type class_ref 160903 // Event
+	  param in name "flush" explicit_type "bool"
+	    defaultvalue "true"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@throws ORMException
+@throws OptimisticLockException
+"
+      end
+
+      operation 185991 "remove"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "entity" type class_ref 160903 // Event
+	  param in name "flush" explicit_type "bool"
+	    defaultvalue "true"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@throws ORMException
+@throws OptimisticLockException
+"
+      end
+
+      operation 186119 "findNewerThan"
+	public explicit_return_type "Event[]"
+	nparams 3
+	  param in name "date" explicit_type ""
+	  param in name "sort" explicit_type ""
+	  param in name "order" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@return ${type} Returns an array of Event objects
+"
+      end
+
+      operation 186247 "findOlderThan"
+	public explicit_return_type "Event[]"
+	nparams 3
+	  param in name "date" explicit_type ""
+	  param in name "sort" explicit_type ""
+	  param in name "order" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@return ${type} Returns an array of Event objects
+"
+      end
+    end
+
+    class 164231 "RoleRepository"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@method Role|null find($id, $lockMode = null, $lockVersion = null)
+@method Role|null findOneBy(array $criteria, array $orderBy = null)
+@method Role[]    findAll()
+@method Role[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+"
+      classrelation 158087 // <generalisation>
+	relation 157959 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 158087 // <generalisation>
+	  b parent class_ref 163847 // ServiceEntityRepository
+      end
+
+      operation 186759 "__construct"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "registry" explicit_type "ManagerRegistry"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 186887 "add"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "entity" type class_ref 161159 // Role
+	  param in name "flush" explicit_type "bool"
+	    defaultvalue "true"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@throws ORMException
+@throws OptimisticLockException
+"
+      end
+
+      operation 187015 "remove"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "entity" type class_ref 161159 // Role
+	  param in name "flush" explicit_type "bool"
+	    defaultvalue "true"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@throws ORMException
+@throws OptimisticLockException
+"
+      end
+
+      operation 187143 "findOneByName"
+	public explicit_return_type "?"
+	nparams 1
+	  param in name "value" explicit_type ""
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 164359 "SongRepository"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@method Song|null find($id, $lockMode = null, $lockVersion = null)
+@method Song|null findOneBy(array $criteria, array $orderBy = null)
+@method Song[]    findAll()
+@method Song[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+"
+      classrelation 158215 // <generalisation>
+	relation 158087 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 158215 // <generalisation>
+	  b parent class_ref 163847 // ServiceEntityRepository
+      end
+
+      operation 187271 "__construct"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "registry" explicit_type "ManagerRegistry"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 187399 "add"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "entity" type class_ref 161287 // Song
+	  param in name "flush" explicit_type "bool"
+	    defaultvalue "true"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@throws ORMException
+@throws OptimisticLockException
+"
+      end
+
+      operation 187527 "remove"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "entity" type class_ref 161287 // Song
+	  param in name "flush" explicit_type "bool"
+	    defaultvalue "true"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@throws ORMException
+@throws OptimisticLockException
+"
+      end
+    end
+
+    class 164487 "UserEventRepository"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@extends ServiceEntityRepository<UserEvent>
+
+@method UserEvent|null find($id, $lockMode = null, $lockVersion = null)
+@method UserEvent|null findOneBy(array $criteria, array $orderBy = null)
+@method UserEvent[]    findAll()
+@method UserEvent[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+"
+      classrelation 158343 // <generalisation>
+	relation 158215 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 158343 // <generalisation>
+	  b parent class_ref 163847 // ServiceEntityRepository
+      end
+
+      operation 187655 "__construct"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "registry" explicit_type "ManagerRegistry"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 187783 "save"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "entity" type class_ref 161799 // UserEvent
+	  param in name "flush" explicit_type "bool"
+	    defaultvalue "false"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 187911 "remove"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "entity" type class_ref 161799 // UserEvent
+	  param in name "flush" explicit_type "bool"
+	    defaultvalue "false"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 164615 "UserRepository"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@method User|null find($id, $lockMode = null, $lockVersion = null)
+@method User|null findOneBy(array $criteria, array $orderBy = null)
+@method User[]    findAll()
+@method User[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+"
+      classrelation 158471 // <generalisation>
+	relation 158343 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 158471 // <generalisation>
+	  b parent class_ref 163847 // ServiceEntityRepository
+      end
+
+      classrelation 158599 // <realization>
+	relation 158471 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 158599 // <realization>
+	  b parent class_ref 164743 // PasswordUpgraderInterface
+      end
+
+      operation 188039 "__construct"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "registry" explicit_type "ManagerRegistry"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 188167 "add"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "entity" type class_ref 161415 // User
+	  param in name "flush" explicit_type "bool"
+	    defaultvalue "true"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@throws ORMException
+@throws OptimisticLockException
+"
+      end
+
+      operation 188295 "remove"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "entity" type class_ref 161415 // User
+	  param in name "flush" explicit_type "bool"
+	    defaultvalue "true"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@throws ORMException
+@throws OptimisticLockException
+"
+      end
+
+      operation 188423 "upgradePassword"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "user" type class_ref 161671 // PasswordAuthenticatedUserInterface
+	  param in name "newHashedPassword" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Used to upgrade (rehash) the user's password automatically over time.
+"
+      end
+
+      operation 188551 "findMembers"
+	public explicit_return_type "User[]"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@return ${type} Returns an array of User objects with the role USER_MEMBER
+"
+      end
+    end
+  end
+
+  deploymentview 145287 "Repository"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 160647 "ArticleRepository"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use App\\Entity\\Article;
+use Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository;
+use Doctrine\\ORM\\OptimisticLockException;
+use Doctrine\\ORM\\ORMException;
+use Doctrine\\Persistence\\ManagerRegistry;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 163719 // ArticleRepository
+      end
+    end
+
+    artifact 160775 "AttachmentRepository"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use App\\Entity\\Attachment;
+use Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository;
+use Doctrine\\ORM\\OptimisticLockException;
+use Doctrine\\ORM\\ORMException;
+use Doctrine\\Persistence\\ManagerRegistry;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 163975 // AttachmentRepository
+      end
+    end
+
+    artifact 160903 "EventRepository"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use App\\Entity\\Event;
+use Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository;
+use Doctrine\\ORM\\OptimisticLockException;
+use Doctrine\\ORM\\ORMException;
+use Doctrine\\Persistence\\ManagerRegistry;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 164103 // EventRepository
+      end
+    end
+
+    artifact 161031 "MessagesRepository"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use App\\Entity\\Messages;
+use Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository;
+use Doctrine\\ORM\\OptimisticLockException;
+use Doctrine\\ORM\\ORMException;
+use Doctrine\\Persistence\\ManagerRegistry;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 160519 // MessagesRepository
+      end
+    end
+
+    artifact 161159 "RoleRepository"
+      stereotype "source"
+      php_src "<?php
+
+namespace App\\Repository;
+
+use App\\Entity\\Role;
+use Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository;
+use Doctrine\\ORM\\OptimisticLockException;
+use Doctrine\\ORM\\ORMException;
+use Doctrine\\Persistence\\ManagerRegistry;
+"
+      associated_elems
+      end
+    end
+
+    artifact 161287 "SongRepository"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use App\\Entity\\Song;
+use Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository;
+use Doctrine\\ORM\\OptimisticLockException;
+use Doctrine\\ORM\\ORMException;
+use Doctrine\\Persistence\\ManagerRegistry;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 164359 // SongRepository
+      end
+    end
+
+    artifact 161415 "UserEventRepository"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use App\\Entity\\UserEvent;
+use Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository;
+use Doctrine\\Persistence\\ManagerRegistry;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 164487 // UserEventRepository
+      end
+    end
+
+    artifact 161543 "UserRepository"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use App\\Entity\\User;
+use Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository;
+use Doctrine\\ORM\\OptimisticLockException;
+use Doctrine\\ORM\\ORMException;
+use Doctrine\\Persistence\\ManagerRegistry;
+use Symfony\\Component\\Security\\Core\\Exception\\UnsupportedUserException;
+use Symfony\\Component\\Security\\Core\\User\\PasswordAuthenticatedUserInterface;
+use Symfony\\Component\\Security\\Core\\User\\PasswordUpgraderInterface;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 164615 // UserRepository
+      end
+    end
+  end
+end

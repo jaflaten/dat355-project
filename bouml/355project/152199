@@ -1,0 +1,570 @@
+format 222
+"Controller" // foo::bakalarka::src::Controller
+  revision 1
+  modified_by 7 "Mehbeh"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  php_dir "E:\\dev\\bakalarka/src/Controller/"
+  php_namespace "App\\Controller"
+  deploymentview 144775 "Controller"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 157447 "BaseController"
+      stereotype "source"
+      php_src "<?php
+
+namespace App\\Controller;
+
+use App\\Repository\\ArticleRepository;
+use App\\Repository\\EventRepository;
+use App\\Repository\\MessagesRepository;
+use App\\Repository\\RoleRepository;
+use App\\Repository\\SongRepository;
+use App\\Repository\\UserEventRepository;
+use App\\Repository\\UserRepository;
+use Doctrine\\ORM\\EntityManagerInterface;
+use Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController;
+use Symfony\\Contracts\\Translation\\TranslatorInterface;
+"
+      associated_elems
+      end
+    end
+
+    artifact 157575 "EditController"
+      stereotype "source"
+      php_src "<?php
+
+namespace App\\Controller;
+
+use App\\Entity\\Article;
+use App\\Entity\\Event;
+use App\\Entity\\Song;
+use App\\Form\\EventType;
+use App\\Form\\RoleType;
+use App\\Form\\SongType;
+use App\\Form\\TinyFormType;
+use App\\Form\\TinyFormTypePage;
+use App\\Form\\UserType;
+use App\\Repository\\ArticleRepository;
+use App\\Repository\\EventRepository;
+use App\\Repository\\MessagesRepository;
+use App\\Repository\\RoleRepository;
+use App\\Repository\\SongRepository;
+use App\\Repository\\UserEventRepository;
+use App\\Repository\\UserRepository;
+use DateTime;
+use Doctrine\\ORM\\EntityManagerInterface;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType;
+use Symfony\\Component\\HttpFoundation\\Request;
+use Symfony\\Component\\HttpFoundation\\Response;
+use Symfony\\Component\\Routing\\Annotation\\Route;
+use Symfony\\Component\\Security\\Core\\User\\UserInterface;
+use Symfony\\Contracts\\Translation\\TranslatorInterface;
+"
+      associated_elems
+      end
+    end
+
+    artifact 157703 "LoginController"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController;
+use Symfony\\Component\\HttpFoundation\\Request;
+use Symfony\\Component\\HttpFoundation\\Response;
+use Symfony\\Component\\Routing\\Annotation\\Route;
+use Symfony\\Component\\Security\\Http\\Authentication\\AuthenticationUtils;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 160007 // LoginController
+      end
+    end
+
+    artifact 157831 "RegistrationController"
+      stereotype "source"
+      php_src "<?php
+
+namespace App\\Controller;
+
+use App\\Entity\\User;
+use App\\Form\\RegistrationFormType;
+use App\\Repository\\RoleRepository;
+use App\\Security\\EmailVerifier;
+use DateTime;
+use Doctrine\\ORM\\EntityManagerInterface;
+use Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController;
+use Symfony\\Component\\HttpFoundation\\Request;
+use Symfony\\Component\\HttpFoundation\\Response;
+use Symfony\\Component\\PasswordHasher\\Hasher\\UserPasswordHasherInterface;
+use Symfony\\Component\\Routing\\Annotation\\Route;
+use Symfony\\Contracts\\Translation\\TranslatorInterface;
+use SymfonyCasts\\Bundle\\VerifyEmail\\Exception\\VerifyEmailExceptionInterface;
+"
+      associated_elems
+      end
+    end
+
+    artifact 157959 "ViewController"
+      stereotype "source"
+      php_src "<?php
+
+namespace App\\Controller;
+
+use App\\Entity\\Event;
+use App\\Entity\\User;
+use App\\Entity\\UserEvent;
+use App\\Form\\JoinEventType;
+use App\\Repository\\ArticleRepository;
+use App\\Repository\\EventRepository;
+use App\\Repository\\MessagesRepository;
+use App\\Repository\\RoleRepository;
+use App\\Repository\\SongRepository;
+use App\\Repository\\UserEventRepository;
+use App\\Repository\\UserRepository;
+use DateTime;
+use Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted;
+use Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController;
+use Symfony\\Component\\HttpFoundation\\Request;
+use Symfony\\Component\\HttpFoundation\\Response;
+use Symfony\\Component\\Routing\\Annotation\\Route;
+use Symfony\\Component\\Security\\Core\\User\\UserInterface;
+"
+      associated_elems
+      end
+    end
+  end
+
+  classview 144263 "Controller"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 159623 "BaseController"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 155271 // <generalisation>
+	relation 155143 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 155271 // <generalisation>
+	  b parent class_ref 159751 // AbstractController
+      end
+    end
+
+    class 159879 "EditController"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 155399 // <generalisation>
+	relation 155271 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 155399 // <generalisation>
+	  b parent class_ref 159623 // BaseController
+      end
+    end
+
+    class 160007 "LoginController"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 155527 // <generalisation>
+	relation 155399 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 155527 // <generalisation>
+	  b parent class_ref 159623 // BaseController
+      end
+
+      operation 179079 "index"
+	public explicit_return_type "Response"
+	nparams 2
+	  param in name "authenticationUtils" explicit_type "AuthenticationUtils"
+	  param in name "request" explicit_type "Request"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "[Route('/login', name: 'app_login')]"
+      end
+    end
+
+    class 160135 "RegistrationController"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 155655 // <generalisation>
+	relation 155527 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 155655 // <generalisation>
+	  b parent class_ref 159751 // AbstractController
+      end
+    end
+
+    class 160263 "ViewController"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 155783 // <generalisation>
+	relation 155655 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 155783 // <generalisation>
+	  b parent class_ref 159623 // BaseController
+      end
+
+      operation 179207 "getHomepage"
+	public explicit_return_type "Response"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@Route(\"/\", name=\"homepage\")
+"
+      end
+
+      operation 179335 "getInfo"
+	public explicit_return_type "Response"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@Route(\"/tajnost\", name=\"secretInfo\")
+@IsGranted(\"ROLE_MEMBER\")
+"
+      end
+
+      operation 179463 "getAboutUs"
+	public explicit_return_type "Response"
+	nparams 1
+	  param in name "request" explicit_type "Request"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "    /**
+     * @Route(\"/profile\", name=\"profile\")
+     * @IsGranted(\"IS_AUTHENTICATED_REMEMBERED\")
+     */
+    public function getProfile (): Response
+    {
+        return $this->render( 'profile.html.twig', ['user' => $this->getUser()]);
+    }
+
+@Route(\"/o_nas\", name=\"aboutUs\")
+"
+      end
+
+      operation 179591 "getChoirmasters"
+	public explicit_return_type "Response"
+	nparams 1
+	  param in name "request" explicit_type "Request"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@Route(\"/sbormistri\", name=\"choirmasters\")
+"
+      end
+
+      operation 179719 "getRepertoir"
+	public explicit_return_type "Response"
+	nparams 1
+	  param in name "request" explicit_type "Request"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@Route(\"/repertoar\", name=\"repertoir\")
+"
+      end
+
+      operation 179847 "getHistory"
+	public explicit_return_type "Response"
+	nparams 1
+	  param in name "request" explicit_type "Request"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@Route(\"/historie_koncertu\", name=\"history\")
+"
+      end
+
+      operation 179975 "getCds"
+	public explicit_return_type "Response"
+	nparams 1
+	  param in name "request" explicit_type "Request"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@Route(\"/cd\", name=\"cds\")
+"
+      end
+
+      operation 180103 "getAudite"
+	public explicit_return_type "Response"
+	nparams 1
+	  param in name "request" explicit_type "Request"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@Route(\"/audite\", name=\"audite\")
+"
+      end
+
+      operation 180231 "getChronicle"
+	public explicit_return_type "Response"
+	nparams 1
+	  param in name "request" explicit_type "Request"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@Route(\"/kronika\", name=\"chronicle\")
+"
+      end
+
+      operation 180359 "getContacts"
+	public explicit_return_type "Response"
+	nparams 1
+	  param in name "request" explicit_type "Request"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@Route(\"/kontakty\", name=\"contacts\")
+"
+      end
+
+      operation 180487 "joinEvent"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "request" explicit_type "Request"
+	  param in name "eventId" explicit_type "int"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@Route(\"/events/{eventId}/join\", name=\"joinEvent\")
+"
+      end
+
+      operation 180615 "getCalendar"
+	public explicit_return_type "Response"
+	nparams 1
+	  param in name "request" explicit_type "Request"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@Route(\"/kalendar\", name=\"calendar\")
+"
+      end
+
+      operation 180743 "getCalendarOld"
+	public explicit_return_type "Response"
+	nparams 1
+	  param in name "request" explicit_type "Request"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@Route(\"/kalendar_stary\", name=\"calendarOld\")
+"
+      end
+
+      operation 180871 "getSongs"
+	public explicit_return_type "Response"
+	nparams 1
+	  param in name "request" explicit_type "Request"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+@Route(\"/skladby\", name=\"songs\")
+"
+      end
+
+      operation 180999 "getUser"
+	public explicit_return_type "?"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+  end
+end

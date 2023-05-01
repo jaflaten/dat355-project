@@ -1,0 +1,73 @@
+format 222
+"config" // foo::bakalarka::config
+  revision 1
+  modified_by 7 "Mehbeh"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  php_dir "E:\\dev\\bakalarka/config/"
+  deploymentview 144135 "config"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 154375 "bundles"
+      stereotype "source"
+      php_src "<?php
+
+return [
+    Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle::class => ['all' => true],
+    Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle::class => ['all' => true],
+    Symfony\\Bundle\\TwigBundle\\TwigBundle::class => ['all' => true],
+    Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle::class => ['dev' => true, 'test' => true],
+    Symfony\\Bundle\\MonologBundle\\MonologBundle::class => ['all' => true],
+    Symfony\\Bundle\\DebugBundle\\DebugBundle::class => ['dev' => true],
+    Symfony\\Bundle\\MakerBundle\\MakerBundle::class => ['dev' => true],
+    Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle::class => ['all' => true],
+    Doctrine\\Bundle\\MigrationsBundle\\DoctrineMigrationsBundle::class => ['all' => true],
+    Symfony\\Bundle\\SecurityBundle\\SecurityBundle::class => ['all' => true],
+    Twig\\Extra\\TwigExtraBundle\\TwigExtraBundle::class => ['all' => true],
+    SymfonyCasts\\Bundle\\VerifyEmail\\SymfonyCastsVerifyEmailBundle::class => ['all' => true],
+];
+"
+      associated_elems
+      end
+    end
+
+    artifact 154503 "preload"
+      stereotype "source"
+      php_src "<?php
+
+if (file_exists(dirname(__DIR__).'/var/cache/prod/App_KernelProdContainer.preload.php')) {
+    require dirname(__DIR__).'/var/cache/prod/App_KernelProdContainer.preload.php';
+}
+"
+      associated_elems
+      end
+    end
+  end
+end

@@ -1,0 +1,56 @@
+format 222
+"tests" // foo::bakalarka::tests
+  revision 1
+  modified_by 7 "Mehbeh"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  php_dir "E:\\dev\\bakalarka/tests/"
+  deploymentview 145543 "tests"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 161799 "bootstrap"
+      stereotype "source"
+      php_src "<?php
+
+use Symfony\\Component\\Dotenv\\Dotenv;
+
+require dirname(__DIR__).'/vendor/autoload.php';
+
+if (file_exists(dirname(__DIR__).'/config/bootstrap.php')) {
+    require dirname(__DIR__).'/config/bootstrap.php';
+} elseif (method_exists(Dotenv::class, 'bootEnv')) {
+    (new Dotenv())->bootEnv(dirname(__DIR__).'/.env');
+}
+"
+      associated_elems
+      end
+    end
+  end
+end

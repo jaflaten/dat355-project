@@ -1,0 +1,13 @@
+class SongRepository
+!!!187271.php!!!	__construct(in registry : ManagerRegistry)
+        parent::__construct($registry, Song::class);
+!!!187399.php!!!	add(in entity : Song, in flush : bool = true) : void
+        $this->_em->persist($entity);
+        if ($flush) {
+            $this->_em->flush();
+        }
+!!!187527.php!!!	remove(in entity : Song, in flush : bool = true) : void
+        $this->_em->remove($entity);
+        if ($flush) {
+            $this->_em->flush();
+        }

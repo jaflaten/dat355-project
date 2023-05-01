@@ -1,0 +1,114 @@
+format 222
+"Command" // foo::bakalarka::src::Command
+  revision 1
+  modified_by 7 "Mehbeh"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  php_dir "E:\\dev\\bakalarka/src/Command/"
+  php_namespace "App\\Command"
+  deploymentview 144647 "Command"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 157319 "GenerateMessagesCommand"
+      stereotype "source"
+      php_src "<?php
+
+namespace App\\Command;
+
+use App\\DatabaseExporter\\MessagesExport;
+use App\\Repository\\MessagesRepository;
+use Doctrine\\ORM\\EntityManagerInterface;
+use phpDocumentor\\Reflection\\Types\\This;
+use Symfony\\Component\\Console\\Command\\Command;
+use Symfony\\Component\\Console\\Exception\\InvalidArgumentException;
+use Symfony\\Component\\Console\\Input\\InputArgument;
+use Symfony\\Component\\Console\\Input\\InputInterface;
+use Symfony\\Component\\Console\\Output\\OutputInterface;
+"
+      associated_elems
+      end
+    end
+  end
+
+  classview 144135 "Command"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 159367 "GenerateMessagesCommand"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 155143 // <generalisation>
+	relation 155015 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 155143 // <generalisation>
+	  b parent class_ref 159495 // Command
+      end
+
+      attribute 151559 "defaultName"
+	class_attribute protected explicit_type ""
+	init_value " 'generateMessages'"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+  end
+end

@@ -1,0 +1,178 @@
+class ViewController
+!!!179207.php!!!	getHomepage() : Response
+        return $this->render( 'index.html.twig');
+!!!179335.php!!!	getInfo() : Response
+        $articles = $this->articleRepository->findBy(['page' => 'tajnost'], ['lastEdited' => 'DESC']);
+        return $this->render( 'information.html.twig', ['articles' => $articles, 'user' => $this->getUser()]);
+!!!179463.php!!!	getAboutUs(in request : Request) : Response
+        $locale = $request->getLocale();
+        $message = $this->messagesRepository->findOneBy(['locale' => $locale, 'messageId' => 'aboutUs']);
+        if ($message===null){
+            $message = $this->messagesRepository->findOneBy(['locale' => $request->getDefaultLocale(), 'messageId' => 'aboutUs']);
+        }
+        if ($message===null){
+            return $this->showError('not_found');
+        }
+        return $this->render( 'page.html.twig', ['message' => $message]);
+!!!179591.php!!!	getChoirmasters(in request : Request) : Response
+        $locale = $request->getLocale();
+        $message = $this->messagesRepository->findOneBy(['locale' => $locale, 'messageId' => 'choirmasters']);
+        if ($message===null){
+            $message = $this->messagesRepository->findOneBy(['locale' => $request->getDefaultLocale(), 'messageId' => 'choimasters']);
+        }
+        if ($message===null){
+            return $this->showError('not_found');
+        }
+        return $this->render( 'page.html.twig', ['message' => $message]);
+!!!179719.php!!!	getRepertoir(in request : Request) : Response
+        $locale = $request->getLocale();
+        $message = $this->messagesRepository->findOneBy(['locale' => $locale, 'messageId' => 'repertoir']);
+        if ($message===null){
+            $message = $this->messagesRepository->findOneBy(['locale' => $request->getDefaultLocale(), 'messageId' => 'repertoir']);
+        }
+        if ($message===null){
+            return $this->showError('not_found');
+        }
+        return $this->render( 'page.html.twig', ['message' => $message]);
+!!!179847.php!!!	getHistory(in request : Request) : Response
+        $locale = $request->getLocale();
+        $message = $this->messagesRepository->findOneBy(['locale' => $locale, 'messageId' => 'history']);
+        if ($message===null){
+            $message = $this->messagesRepository->findOneBy(['locale' => $request->getDefaultLocale(), 'messageId' => 'history']);
+        }
+        if ($message===null){
+            return $this->showError('not_found');
+        }
+        return $this->render( 'page.html.twig', ['message' => $message]);
+!!!179975.php!!!	getCds(in request : Request) : Response
+        $locale = $request->getLocale();
+        $message = $this->messagesRepository->findOneBy(['locale' => $locale, 'messageId' => 'cds']);
+        if ($message===null){
+            $message = $this->messagesRepository->findOneBy(['locale' => $request->getDefaultLocale(), 'messageId' => 'cds']);
+        }
+        if ($message===null){
+            return $this->showError('not_found');
+        }
+        return $this->render( 'page.html.twig', ['message' => $message]);
+!!!180103.php!!!	getAudite(in request : Request) : Response
+        $locale = $request->getLocale();
+        $message = $this->messagesRepository->findOneBy(['locale' => $locale, 'messageId' => 'audite']);
+        if ($message===null){
+            $message = $this->messagesRepository->findOneBy(['locale' => $request->getDefaultLocale(), 'messageId' => 'audite']);
+        }
+        if ($message===null){
+            return $this->showError('not_found');
+        }
+        return $this->render( 'page.html.twig', ['message' => $message]);
+!!!180231.php!!!	getChronicle(in request : Request) : Response
+        $locale = $request->getLocale();
+        $message = $this->messagesRepository->findOneBy(['locale' => $locale, 'messageId' => 'chronicle']);
+        if ($message===null){
+            $message = $this->messagesRepository->findOneBy(['locale' => $request->getDefaultLocale(), 'messageId' => 'chronicle']);
+        }
+        if ($message===null){
+            return $this->showError('not_found');
+        }
+        return $this->render( 'page.html.twig', ['message' => $message]);
+!!!180359.php!!!	getContacts(in request : Request) : Response
+        $locale = $request->getLocale();
+        $message = $this->messagesRepository->findOneBy(['locale' => $locale, 'messageId' => 'contacts']);
+        if ($message===null){
+            $message = $this->messagesRepository->findOneBy(['locale' => $request->getDefaultLocale(), 'messageId' => 'contacts']);
+        }
+        if ($message===null){
+            return $this->showError('not_found');
+        }
+        return $this->render( 'page.html.twig', ['message' => $message]);
+!!!180487.php!!!	joinEvent(in request : Request, in eventId : int)
+        $joinEventForm = $this->createForm(JoinEventType::class);
+        $joinEventForm->handleRequest($request);
+
+        if ($joinEventForm->isSubmitted() && $joinEventForm->isValid()) {
+            // Process form data and add user to event attendees
+//            $entityManager = $this->getDoctrine()->getManager();
+            $event = $this->eventRepository->findOneBy(['id' => $eventId]);
+            $user = $this->getUserObject();
+
+            if (!$event) {
+                throw $this->createNotFoundException('Event not found');
+            }
+            $status = $joinEventForm->get('status')->getViewData();
+            $userEvent = $this->userEventRepository->findOneBy(['event' => $event, 'member' => $user]);
+            if ($userEvent == null){
+                $userEvent = new UserEvent();
+                $userEvent->setEvent($event);
+                $userEvent->setMember($user);
+            }
+            $userEvent->setStatus($status);
+            $this->entityManager->persist($userEvent);
+            $this->entityManager->flush();
+        }
+
+        return $this->redirectToRoute('calendar');
+!!!180615.php!!!	getCalendar(in request : Request) : Response
+
+        // Get events from the database
+        $events = $this->eventRepository->findNewerThan(new DateTime('now'), 'date', 'ASC');
+        $forms = [];
+        foreach ($events as $event){
+            $userEvent = $this->userEventRepository->findOneBy(['event' => $event, 'member' => $this->getUserObject()]);
+            $forms[$event->getId()] = $this->createForm(JoinEventType::class, $userEvent);
+        }
+
+
+//        $joinEventForm = $this->createForm(JoinEventType::class);
+
+//        $joinEventForm->handleRequest($request);
+//        if ($joinEventForm->isSubmitted() && $joinEventForm->isValid()) {
+//            // Handle the form submission
+//            $data = $joinEventForm->getData();
+//            var_dump($data);
+//            // ...
+//        }
+        foreach ($forms as $form){
+            $form->handleRequest($request);
+            if ($form->isSubmitted() && $form->isValid())
+            {
+               // Handle the form submission
+                $userEvent = $form->getData();
+//                var_dump($data);
+//                $event = $data->get('event');
+//                $user = $this->getUserObject();
+
+//                if (!$event) {
+//                    throw $this->createNotFoundException('Event not found');
+//                }
+//                $status = $form->get('status')->getViewData();
+//                $userEvent = $this->userEventRepository->findOneBy(['event' => $event, 'member' => $user]);
+//                if ($userEvent == null){
+//                    $userEvent = new UserEvent();
+//                    $userEvent->setEvent($event);
+//                    $userEvent->setMember($user);
+//                }
+//                $userEvent->setStatus($status);
+                $this->entityManager->persist($userEvent);
+                $this->entityManager->flush();
+
+                return $this->redirectToRoute('calendar');
+            }
+        }
+
+        $formViews = array_map(function($form) {
+            return $form->createView();
+        }, $forms);
+
+
+        return $this->render('calendar/calendar.html.twig', [
+            'events' => $events,
+//            'joinEventForm' => $joinEventForm-
+            'formViews' => $formViews,
+            'buttons' => 'calendar/calendar_actual.html.twig',
+            'user' => $this->getUser()
+        ]);
+!!!180743.php!!!	getCalendarOld(in request : Request) : Response
+        $events = $this->eventRepository->findOlderThan(new DateTime('now'), 'date', 'DESC');
+        return $this->render( 'calendar/calendar.html.twig', ['events' => $events, 'buttons' => 'calendar/calendar_old.html.twig']);
+!!!180871.php!!!	getSongs(in request : Request) : Response
+        $songs = $this->songRepository->findAll();
+        return $this->render( 'songs.html.twig', ['songs' => $songs]);

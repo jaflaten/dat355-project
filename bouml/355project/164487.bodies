@@ -1,0 +1,15 @@
+class UserEventRepository
+!!!187655.php!!!	__construct(in registry : ManagerRegistry)
+        parent::__construct($registry, UserEvent::class);
+!!!187783.php!!!	save(in entity : UserEvent, in flush : bool = false) : void
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+!!!187911.php!!!	remove(in entity : UserEvent, in flush : bool = false) : void
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }

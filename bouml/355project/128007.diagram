@@ -10,7 +10,7 @@ classcanvas 128135 class_ref 131975 // Attachment
 end
 classcanvas 128263 class_ref 132103 // Event
   classdiagramsettings member_max_width 0 end
-  xyz 309 513 2000
+  xyz 310 512 2000
 end
 classcanvas 128391 class_ref 132231 // Messages
   classdiagramsettings member_max_width 0 end
@@ -24,9 +24,9 @@ classcanvas 128647 class_ref 132487 // Song
   classdiagramsettings member_max_width 0 end
   xyz 483 135 2000
 end
-classcanvas 128775 class_ref 132615 // User
+classcanvas 129415 class_ref 161415 // User
   classdiagramsettings member_max_width 0 end
-  xyz 497 590 2000
+  xyz 477 707 2000
 end
 relationcanvas 129031 relation_ref 145799 // <association>
   from ref 128391 z 2001 to point 235 573

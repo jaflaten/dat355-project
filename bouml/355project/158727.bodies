@@ -1,0 +1,18 @@
+class Version20230418172252
+!!!178311.php!!!	getDescription() : string
+        return '';
+!!!178439.php!!!	up(in schema : Schema) : void
+        // this up() migration is auto-generated, please modify it to your needs
+        $this->addSql('CREATE SEQUENCE user_event_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
+        $this->addSql('CREATE TABLE user_event (id INT NOT NULL, member_id INT NOT NULL, event_id INT NOT NULL, status INT NOT NULL, PRIMARY KEY(id))');
+        $this->addSql('CREATE INDEX IDX_D96CF1FF7597D3FE ON user_event (member_id)');
+        $this->addSql('CREATE INDEX IDX_D96CF1FF71F7E88B ON user_event (event_id)');
+        $this->addSql('ALTER TABLE user_event ADD CONSTRAINT FK_D96CF1FF7597D3FE FOREIGN KEY (member_id) REFERENCES "user" (id) NOT DEFERRABLE INITIALLY IMMEDIATE');
+        $this->addSql('ALTER TABLE user_event ADD CONSTRAINT FK_D96CF1FF71F7E88B FOREIGN KEY (event_id) REFERENCES event (id) NOT DEFERRABLE INITIALLY IMMEDIATE');
+!!!178567.php!!!	down(in schema : Schema) : void
+        // this down() migration is auto-generated, please modify it to your needs
+        $this->addSql('CREATE SCHEMA public');
+        $this->addSql('DROP SEQUENCE user_event_id_seq CASCADE');
+        $this->addSql('ALTER TABLE user_event DROP CONSTRAINT FK_D96CF1FF7597D3FE');
+        $this->addSql('ALTER TABLE user_event DROP CONSTRAINT FK_D96CF1FF71F7E88B');
+        $this->addSql('DROP TABLE user_event');

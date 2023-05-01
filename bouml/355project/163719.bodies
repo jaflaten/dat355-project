@@ -1,0 +1,13 @@
+class ArticleRepository
+!!!184967.php!!!	__construct(in registry : ManagerRegistry)
+        parent::__construct($registry, Article::class);
+!!!185095.php!!!	add(in entity : Article, in flush : bool = true) : void
+        $this->_em->persist($entity);
+        if ($flush) {
+            $this->_em->flush();
+        }
+!!!185223.php!!!	remove(in entity : Article, in flush : bool = true) : void
+        $this->_em->remove($entity);
+        if ($flush) {
+            $this->_em->flush();
+        }

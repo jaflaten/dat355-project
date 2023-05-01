@@ -1,0 +1,27 @@
+class EmailVerifier
+!!!188679.php!!!	__construct(in helper : VerifyEmailHelperInterface, in mailer : MailerInterface, in manager : EntityManagerInterface)
+        $this->verifyEmailHelper = $helper;
+        $this->mailer = $mailer;
+        $this->entityManager = $manager;
+!!!188807.php!!!	sendEmailConfirmation(in verifyEmailRouteName : string, in user : UserInterface, in email : TemplatedEmail) : void
+        $signatureComponents = $this->verifyEmailHelper->generateSignature(
+            $verifyEmailRouteName,
+            $user->getId(),
+            $user->getEmail()
+        );
+
+        $context = $email->getContext();
+        $context['signedUrl'] = $signatureComponents->getSignedUrl();
+        $context['expiresAtMessageKey'] = $signatureComponents->getExpirationMessageKey();
+        $context['expiresAtMessageData'] = $signatureComponents->getExpirationMessageData();
+
+        $email->context($context);
+
+        $this->mailer->send($email);
+!!!188935.php!!!	handleEmailConfirmation(in request : Request, in user : UserInterface) : void
+        $this->verifyEmailHelper->validateEmailConfirmation($request->getUri(), $user->getId(), $user->getEmail());
+
+        $user->setIsVerified(true);
+
+        $this->entityManager->persist($user);
+        $this->entityManager->flush();

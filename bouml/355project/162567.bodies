@@ -1,0 +1,12 @@
+class PasswordTypeExtension
+!!!182919.php!!!	buildView(in view : FormView, in form : FormInterface, in options : array)
+        if (isset($options['bulma_icon'])) {
+            $view->vars['bulma_icon'] = $options['bulma_icon'];
+        }
+!!!183047.php!!!	configureOptions(in resolver : OptionsResolver)
+        $resolver->setDefined('bulma_icon');
+        $resolver->setAllowedTypes('bulma_icon', 'array');
+!!!183175.php!!!	getExtendedType() : string
+        return PasswordType::class;
+!!!183303.php!!!	getExtendedTypes() : iterable
+        return [PasswordType::class];

@@ -1,0 +1,122 @@
+format 222
+"src" // foo::bakalarka::src
+  revision 1
+  modified_by 7 "Mehbeh"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  php_dir "E:\\dev\\bakalarka/src/"
+  php_namespace "App"
+  deploymentview 144519 "src"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 157191 "Kernel"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use Symfony\\Bundle\\FrameworkBundle\\Kernel\\MicroKernelTrait;
+use Symfony\\Component\\HttpKernel\\Kernel as BaseKernel;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 158983 // Kernel
+      end
+    end
+  end
+
+  classview 144007 "src"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 158983 "Kernel"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 154887 // <generalisation>
+	relation 154759 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 154887 // <generalisation>
+	  b parent class_ref 159111 // BaseKernel
+      end
+
+      classrelation 155015 // <generalisation>
+	relation 154887 ---|>
+	  a public
+	    php "  use ${type};"
+	    classrelation_ref 155015 // <generalisation>
+	  b parent class_ref 159239 // MicroKernelTrait
+      end
+    end
+  end
+
+  package_ref 152071 // Command
+
+  package_ref 152199 // Controller
+
+  package_ref 152327 // DatabaseExporter
+
+  package_ref 152455 // Repository
+
+  package_ref 152583 // Entity
+
+  package_ref 152711 // Form
+
+  package_ref 152839 // Security
+
+  package_ref 153095 // interfaces
+end

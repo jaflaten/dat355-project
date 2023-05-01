@@ -1,0 +1,21 @@
+class JoinEventType
+!!!182535.php!!!	__construct(in translator : TranslatorInterface)
+        $this->translator = $translator;
+!!!182663.php!!!	buildForm(in builder : FormBuilderInterface, in options : )
+        $builder
+            ->add('status', ChoiceType::class, [
+                'label' => $this->translator->trans('status'),
+                'choices' => [
+                    $this->translator->trans('attending') => UserEvent::ATTENDING,
+                    $this->translator->trans('maybe_attending') => UserEvent::MAYBE_ATTENDING,
+                    $this->translator->trans('not_attending') => UserEvent::NOT_ATTENDING,
+                ],
+                'expanded' => true,
+                'multiple' => false,
+            ])
+            ->add('event', HiddenType::class)
+            ->add('save', SubmitType::class, ['label' => $this->translator->trans('form.save')]);
+!!!182791.php!!!	configureOptions(in resolver : OptionsResolver)
+        $resolver->setDefaults([
+            'data_class' => UserEvent::class,
+        ]);

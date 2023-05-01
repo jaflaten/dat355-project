@@ -1,0 +1,16 @@
+class Version20220913105750
+!!!154119.php!!!	getDescription() : string
+        return '';
+!!!154247.php!!!	up(in schema : Schema) : void
+        // this up() migration is auto-generated, please modify it to your needs
+        $this->addSql('ALTER TABLE event DROP time_begin');
+        $this->addSql('ALTER TABLE event DROP time_meet');
+        $this->addSql('ALTER TABLE event ALTER date TYPE TIMESTAMP(0) WITHOUT TIME ZONE');
+        $this->addSql('ALTER TABLE event ALTER date DROP DEFAULT');
+!!!154375.php!!!	down(in schema : Schema) : void
+        // this down() migration is auto-generated, please modify it to your needs
+        $this->addSql('CREATE SCHEMA public');
+        $this->addSql('ALTER TABLE event ADD time_begin TIME(0) WITHOUT TIME ZONE DEFAULT NULL');
+        $this->addSql('ALTER TABLE event ADD time_meet TIME(0) WITHOUT TIME ZONE DEFAULT NULL');
+        $this->addSql('ALTER TABLE event ALTER date TYPE DATE');
+        $this->addSql('ALTER TABLE event ALTER date DROP DEFAULT');

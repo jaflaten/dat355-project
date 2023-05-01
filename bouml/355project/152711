@@ -1,0 +1,897 @@
+format 222
+"Form" // foo::bakalarka::src::Form
+  revision 1
+  modified_by 7 "Mehbeh"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  php_dir "E:\\dev\\bakalarka/src/Form/"
+  php_namespace "App\\Form"
+  deploymentview 145159 "Form"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 159239 "DayMonthBirthdayType"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\BirthdayType;
+use Symfony\\Component\\OptionsResolver\\OptionsResolver;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 161927 // DayMonthBirthdayType
+      end
+    end
+
+    artifact 159367 "EventType"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use App\\Entity\\Event;
+use App\\Entity\\Song;
+use Symfony\\Bridge\\Doctrine\\Form\\Type\\EntityType;
+use Symfony\\Component\\Form\\AbstractType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\DateType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\TimeType;
+use Symfony\\Component\\Form\\FormBuilderInterface;
+use Symfony\\Component\\OptionsResolver\\OptionsResolver;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 162183 // EventType
+      end
+    end
+
+    artifact 159495 "JoinEventType"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use App\\Entity\\UserEvent;
+use Symfony\\Component\\Form\\AbstractType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\HiddenType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\IntegerType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType;
+use Symfony\\Component\\Form\\FormBuilderInterface;
+use Symfony\\Component\\OptionsResolver\\OptionsResolver;
+use Symfony\\Contracts\\Translation\\TranslatorInterface;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 162439 // JoinEventType
+      end
+    end
+
+    artifact 159623 "PasswordTypeExtension"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use Symfony\\Component\\Form\\AbstractTypeExtension;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\PasswordType;
+use Symfony\\Component\\Form\\FormInterface;
+use Symfony\\Component\\Form\\FormView;
+use Symfony\\Component\\OptionsResolver\\OptionsResolver;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 162567 // PasswordTypeExtension
+      end
+    end
+
+    artifact 159751 "RegistrationFormType"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use App\\Entity\\User;
+use Symfony\\Component\\Form\\AbstractType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\CheckboxType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\PasswordType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType;
+use Symfony\\Component\\Form\\FormBuilderInterface;
+use Symfony\\Component\\OptionsResolver\\OptionsResolver;
+use Symfony\\Component\\Validator\\Constraints\\IsTrue;
+use Symfony\\Component\\Validator\\Constraints\\Length;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 162823 // RegistrationFormType
+      end
+    end
+
+    artifact 159879 "RoleType"
+      stereotype "source"
+      php_src "<?php
+
+namespace App\\Form;
+
+use App\\Entity\\Role;
+use App\\Entity\\User;
+use Doctrine\\ORM\\EntityManagerInterface;
+use Symfony\\Component\\Form\\AbstractType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType;
+use Symfony\\Component\\Form\\FormBuilderInterface;
+use Symfony\\Component\\OptionsResolver\\OptionsResolver;
+"
+      associated_elems
+      end
+    end
+
+    artifact 160007 "SongType"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use App\\Entity\\Song;
+use Symfony\\Component\\Form\\AbstractType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\NumberType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType;
+use Symfony\\Component\\Form\\FormBuilderInterface;
+use Symfony\\Component\\OptionsResolver\\OptionsResolver;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 163079 // SongType
+      end
+    end
+
+    artifact 160135 "TextTypeExtension"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use Symfony\\Component\\Form\\AbstractTypeExtension;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType;
+use Symfony\\Component\\Form\\FormInterface;
+use Symfony\\Component\\Form\\FormView;
+use Symfony\\Component\\OptionsResolver\\OptionsResolver;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 163207 // TextTypeExtension
+      end
+    end
+
+    artifact 160263 "TinyFormType"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\TextareaType;
+use Symfony\\Component\\Form\\FormBuilderInterface;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 163335 // TinyFormType
+      end
+    end
+
+    artifact 160391 "TinyFormTypePage"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\TextareaType;
+use Symfony\\Component\\Form\\FormBuilderInterface;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 163463 // TinyFormTypePage
+      end
+    end
+
+    artifact 160519 "UserType"
+      stereotype "source"
+      php_src "<?php
+
+${namespace}
+
+use App\\Entity\\User;
+use Symfony\\Component\\Form\\AbstractType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType;
+use Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType;
+use Symfony\\Component\\Form\\FormBuilderInterface;
+use Symfony\\Component\\OptionsResolver\\OptionsResolver;
+
+${definition}
+
+"
+      associated_elems
+	class_ref 163591 // UserType
+      end
+    end
+  end
+
+  classview 144775 "Form"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 161927 "DayMonthBirthdayType"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 156167 // <generalisation>
+	relation 156039 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 156167 // <generalisation>
+	  b parent class_ref 162055 // BirthdayType
+      end
+
+      operation 182151 "configureOptions"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "resolver" explicit_type "OptionsResolver"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 162183 "EventType"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 156295 // <generalisation>
+	relation 156167 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 156295 // <generalisation>
+	  b parent class_ref 162311 // AbstractType
+      end
+
+      operation 182279 "buildForm"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "builder" explicit_type "FormBuilderInterface"
+	  param in name "options" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, array ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 182407 "configureOptions"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "resolver" explicit_type "OptionsResolver"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 162439 "JoinEventType"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 156423 // <generalisation>
+	relation 156295 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 156423 // <generalisation>
+	  b parent class_ref 162311 // AbstractType
+      end
+
+      attribute 156935 "translator"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 182535 "__construct"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "translator" explicit_type "TranslatorInterface"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 182663 "buildForm"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "builder" explicit_type "FormBuilderInterface"
+	  param in name "options" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, array ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 182791 "configureOptions"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "resolver" explicit_type "OptionsResolver"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 162567 "PasswordTypeExtension"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+TextTypeExtension
+
+@author Dennis Smink <d.smink@gmail.com>
+"
+      classrelation 156551 // <generalisation>
+	relation 156423 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 156551 // <generalisation>
+	  b parent class_ref 162695 // AbstractTypeExtension
+      end
+
+      operation 182919 "buildView"
+	public explicit_return_type ""
+	nparams 3
+	  param in name "view" explicit_type "FormView"
+	  param in name "form" explicit_type "FormInterface"
+	  param in name "options" explicit_type "array"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}, array ${p2}${v2}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Builds the view.
+
+This method is called after the extended type has built the view to
+further modify it.
+
+@see FormTypeInterface::buildView()
+
+@param ${t0}      ${p0}    The view
+@param ${t1} ${p1}    The form
+@param ${t2}         ${p2} The options
+"
+      end
+
+      operation 183047 "configureOptions"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "resolver" explicit_type "OptionsResolver"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Configures the options for this type.
+
+@param ${t0} ${p0} The resolver for the options
+"
+      end
+
+      operation 183175 "getExtendedType"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Returns the name of the type being extended.
+
+@return ${type} The name of the type being extended
+"
+      end
+
+      operation 183303 "getExtendedTypes"
+	class_operation public explicit_return_type "iterable"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 162823 "RegistrationFormType"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 156679 // <generalisation>
+	relation 156551 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 156679 // <generalisation>
+	  b parent class_ref 162311 // AbstractType
+      end
+
+      operation 183431 "buildForm"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "builder" explicit_type "FormBuilderInterface"
+	  param in name "options" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, array ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 183559 "configureOptions"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "resolver" explicit_type "OptionsResolver"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 162951 "RoleType"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 156807 // <generalisation>
+	relation 156679 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 156807 // <generalisation>
+	  b parent class_ref 162311 // AbstractType
+      end
+    end
+
+    class 163079 "SongType"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 156935 // <generalisation>
+	relation 156807 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 156935 // <generalisation>
+	  b parent class_ref 162311 // AbstractType
+      end
+
+      operation 183687 "buildForm"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "builder" explicit_type "FormBuilderInterface"
+	  param in name "options" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, array ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 183815 "configureOptions"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "resolver" explicit_type "OptionsResolver"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 163207 "TextTypeExtension"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 157063 // <generalisation>
+	relation 156935 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 157063 // <generalisation>
+	  b parent class_ref 162695 // AbstractTypeExtension
+      end
+
+      operation 183943 "buildView"
+	public explicit_return_type ""
+	nparams 3
+	  param in name "view" explicit_type "FormView"
+	  param in name "form" explicit_type "FormInterface"
+	  param in name "options" explicit_type "array"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}, array ${p2}${v2}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Builds the view.
+
+This method is called after the extended type has built the view to
+further modify it.
+
+@see FormTypeInterface::buildView()
+
+@param ${t0}      ${p0}    The view
+@param ${t1} ${p1}    The form
+@param ${t2}         ${p2} The options
+"
+      end
+
+      operation 184071 "configureOptions"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "resolver" explicit_type "OptionsResolver"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Configures the options for this type.
+
+@param ${t0} ${p0} The resolver for the options
+"
+      end
+
+      operation 184199 "getExtendedType"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Returns the name of the type being extended.
+
+@return ${type} The name of the type being extended
+"
+      end
+
+      operation 184327 "getExtendedTypes"
+	class_operation public explicit_return_type "iterable"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 163335 "TinyFormType"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 157191 // <generalisation>
+	relation 157063 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 157191 // <generalisation>
+	  b parent class_ref 162311 // AbstractType
+      end
+
+      operation 184455 "buildForm"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "builder" explicit_type "FormBuilderInterface"
+	  param in name "options" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, array ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 163463 "TinyFormTypePage"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 157319 // <generalisation>
+	relation 157191 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 157319 // <generalisation>
+	  b parent class_ref 162311 // AbstractType
+      end
+
+      operation 184583 "buildForm"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "builder" explicit_type "FormBuilderInterface"
+	  param in name "options" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, array ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 163591 "UserType"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 157447 // <generalisation>
+	relation 157319 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 157447 // <generalisation>
+	  b parent class_ref 162311 // AbstractType
+      end
+
+      operation 184711 "buildForm"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "builder" explicit_type "FormBuilderInterface"
+	  param in name "options" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, array ${p1}${v1}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 184839 "configureOptions"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "resolver" explicit_type "OptionsResolver"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+  end
+end

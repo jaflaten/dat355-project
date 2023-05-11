@@ -1,6 +1,0 @@
-class TinyFormType
-!!!160647.php!!!	buildForm(in builder : FormBuilderInterface, in options : ) : void
-        $builder
-            ->add('title', TextareaType::class,  array('required'=>false))
-            ->add('content', TextareaType::class,  array('required'=>false))
-            ->add('save', SubmitType::class, ['label' => 'uložit']);

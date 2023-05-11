@@ -1,13 +1,13 @@
-window_sizes 3440 1417 806 2629 1267 104
+window_sizes 1718 1378 659 1054 1228 104
 
 diagrams
   classdiagram_ref 128007 // entities
-    725 1006 100 A4 0 0
+    725 1006 100 A4 155 0
   active  sequencediagram_ref 128135 // sequence of something
-    725 1006 100 A4 0 0
+    972 1006 100 A4 0 0
 end
 show_stereotypes
-selected class_ref 131079 // EditController
+selected class_ref 164231 // RoleRepository
 open
   deploymentview_ref 128647 // Controller
   class_ref 131207 // LoginController
@@ -15,5 +15,14 @@ open
   deploymentview_ref 128903 // Entity
   classview_ref 128903 // Entity
   classview_ref 135815 // 355classview
+  classview_ref 144135 // Command
+  classview_ref 144263 // Controller
+  classview_ref 144519 // Repository
+  deploymentview_ref 145287 // Repository
+  class_ref 160775 // Attachment
+  class_ref 160903 // Event
+  class_ref 161415 // User
+  classview_ref 145031 // interface
+  classview_ref 145159 // Forms
 end
 end

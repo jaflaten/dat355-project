@@ -1,6 +1,6 @@
 format 222
 "Entity" // bakalarka::bakalarka::src::Entity
-  revision 2
+  revision 3
   modified_by 7 "Mehbeh"
   // class settings
   
@@ -284,6 +284,10 @@ ${members}}
 	
 	
       end
+
+      classrelation 166279 // authoredBy (<association>)
+	relation_ref 165511 // <association>
+      end
     end
 
     class 131975 "Attachment"
@@ -378,6 +382,10 @@ ${members}}
 "
 	
 	
+      end
+
+      classrelation 165255 // songs (<association>)
+	relation_ref 164999 // <association>
       end
     end
 
@@ -581,6 +589,22 @@ ${members}}
       classrelation 145927 // <association>
 	relation_ref 145799 // <association>
       end
+
+      classrelation 165767 // song (<association>)
+	relation_ref 165255 // <association>
+      end
+
+      classrelation 165895 // eventUsers (<association>)
+	relation 165383 ----
+	  a role_name "eventUsers" multiplicity "*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 165895 // eventUsers (<association>)
+	  b role_name "userEvents" multiplicity "*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 166023 // userEvents (<association>)
+      end
     end
 
     class 132231 "Messages"
@@ -690,7 +714,7 @@ ${members}}
 	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
 "
 	    classrelation_ref 145799 // <association>
-	  b role_name "" private
+	  b role_name "" multiplicity "0..1" private
 	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
 "
 	    classrelation_ref 145927 // <association>
@@ -778,6 +802,18 @@ ${members}}
 "
 	
 	
+      end
+
+      classrelation 165383 // roleUsers (<association>)
+	relation 165127 ----
+	  a role_name "roleUsers" multiplicity "*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 165383 // roleUsers (<association>)
+	  b role_name "userRoles" multiplicity "*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 165511 // userRoles (<association>)
       end
     end
 
@@ -898,6 +934,30 @@ ${members}}
 "
 	
 	
+      end
+
+      classrelation 165127 // attachments. (<association>)
+	relation 164999 ----
+	  a role_name "attachments." multiplicity "1..*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 165127 // attachments. (<association>)
+	  b role_name "songs" multiplicity "1..*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 165255 // songs (<association>)
+      end
+
+      classrelation 165639 // events. (<association>)
+	relation 165255 ----
+	  a role_name "events." multiplicity "*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 165639 // events. (<association>)
+	  b role_name "song" multiplicity "*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 165767 // song (<association>)
       end
     end
 

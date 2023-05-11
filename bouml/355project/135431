@@ -1,6 +1,6 @@
 format 222
 "Controller" // bakalarka::bakalarka::src::Controller
-  revision 1
+  revision 2
   modified_by 7 "Mehbeh"
   // class settings
   
@@ -186,106 +186,6 @@ use Symfony\\Component\\Security\\Core\\User\\UserInterface;
     
     activitydiagramsettings
      end
-    class 130823 "BaseController"
-      visibility package 
-      cpp_decl ""
-      java_decl ""
-      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
-${members}}
-"
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      mysql_decl ""
-      
-      classrelation 130439 // <generalisation>
-	relation 130439 ---|>
-	  a public
-	    php "${type}"
-	    classrelation_ref 130439 // <generalisation>
-	  b parent class_ref 130951 // AbstractController
-      end
-    end
-
-    class 131079 "EditController"
-      visibility package 
-      cpp_decl ""
-      java_decl ""
-      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
-${members}}
-"
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      mysql_decl ""
-      
-      classrelation 130567 // <generalisation>
-	relation 130567 ---|>
-	  a public
-	    php "${type}"
-	    classrelation_ref 130567 // <generalisation>
-	  b parent class_ref 130823 // BaseController
-      end
-    end
-
-    class 131207 "LoginController"
-      visibility package 
-      cpp_decl ""
-      java_decl ""
-      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
-${members}}
-"
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      mysql_decl ""
-      
-      classrelation 130695 // <generalisation>
-	relation 130695 ---|>
-	  a public
-	    php "${type}"
-	    classrelation_ref 130695 // <generalisation>
-	  b parent class_ref 130823 // BaseController
-      end
-
-      operation 134151 "index"
-	public explicit_return_type "Response"
-	nparams 2
-	  param in name "authenticationUtils" explicit_type "AuthenticationUtils"
-	  param in name "request" explicit_type "Request"
-	
-	
-	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${type}
-{
-  ${body}}
-"
-	
-	
-	comment "[Route('/login', name: 'app_login')]"
-      end
-    end
-
-    class 131335 "RegistrationController"
-      visibility package 
-      cpp_decl ""
-      java_decl ""
-      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
-${members}}
-"
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      mysql_decl ""
-      
-      classrelation 130823 // <generalisation>
-	relation 130823 ---|>
-	  a public
-	    php "${type}"
-	    classrelation_ref 130823 // <generalisation>
-	  b parent class_ref 130951 // AbstractController
-      end
-    end
-
     class 131463 "ViewController"
       visibility package 
       cpp_decl ""
@@ -543,6 +443,743 @@ ${members}}
 {
   ${body}}
 "
+	
+	
+      end
+    end
+
+    class 130823 "BaseController"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 130439 // <generalisation>
+	relation 130439 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 130439 // <generalisation>
+	  b parent class_ref 130951 // AbstractController
+      end
+
+      operation 198151 "__construct"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "    /**
+     * @param \\Doctrine\\ORM\\EntityManagerInterface $entityManager
+     * @param \\App\\Repository\\ArticleRepository $articleRepository
+     * @param \\App\\Repository\\UserRepository $userRepository
+     * @param \\App\\Repository\\UserEventRepository $userEventRepository
+     * @param \\App\\Repository\\MessagesRepository $messagesRepository
+     * @param \\App\\Repository\\EventRepository $eventRepository
+     * @param \\App\\Repository\\SongRepository $songRepository
+     * @param \\App\\Repository\\RoleRepository $roleRepository
+     * @param \\Symfony\\Contracts\\Translation\\TranslatorInterface $translator
+     */
+    public function __construct(EntityManagerInterface $entityManager, ArticleRepository $articleRepository, UserRepository $userRepository, UserEventRepository $userEventRepository, MessagesRepository $messagesRepository, EventRepository $eventRepository, SongRepository $songRepository, RoleRepository $roleRepository, TranslatorInterface $translator)
+    {
+        $this->entityManager = $entityManager;
+        $this->articleRepository = $articleRepository;
+        $this->userRepository = $userRepository;
+        $this->userEventRepository = $userEventRepository;
+        $this->messagesRepository = $messagesRepository;
+        $this->eventRepository = $eventRepository;
+        $this->songRepository = $songRepository;
+        $this->roleRepository = $roleRepository;
+        $this->translator = $translator;
+    }"
+	
+	
+      end
+
+      operation 198279 "showError"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "    public function showError($messageId)
+    {
+        return $this->render('error.html.twig', ['message' => $this->translator->trans($messageId),]);
+    }"
+	
+	
+      end
+    end
+
+    class 131079 "EditController"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 130567 // <generalisation>
+	relation 130567 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 130567 // <generalisation>
+	  b parent class_ref 130823 // BaseController
+      end
+
+      operation 196103 "approveMembers"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "    /**
+     * @Route(\"/odsouhlasit\", name=\"approveMembers\")
+     */    
+public function approveMembers(Request $request): Response
+    {
+        if (!$this->isGranted('ROLE_APPROVE_MEMBERS')){
+            return $this->showError('not_allowed_to_do_this');
+        }
+        $result = null;
+        $possibilities = [];
+        $tmp = $this->roleRepository->find(1)->getUsers()->toArray();
+        foreach ($tmp as $user){
+            $possibilities[$user->getEmail()] = $user;
+        }
+        //var_dump($possibilities);
+        $form = $this->createFormBuilder()
+            -> add('users', ChoiceType::class, [
+                'label' => 'u ivatelé ke schválení',
+                'choices' => $possibilities,
+                'choice_value' => 'email',
+                'multiple' => true,
+                'expanded' => true,
+                'invalid_message' => ' ádní u ivatelé ke schválení'
+            ])
+            -> add('save', SubmitType::class, ['label' => 'approve'])
+            -> getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()){
+            $result = $form->getData();
+            $users = $result['users'];
+            $role = $this->roleRepository->find(2);
+            $roleUser = $this->roleRepository->find(1);
+            foreach ($users as $user){
+                $user->addRole($role);
+                $user->removeRole($roleUser);
+                $this->entityManager->persist($user);
+            }
+            $this->entityManager->flush();
+            return $this->redirectToRoute('aboutUs');
+        }
+
+        return $this->render('approve_members.html.twig', ['form' => $form->createView()]);
+    }"
+	
+	
+      end
+
+      operation 196231 "addRoles"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def " /**
+     * @Route(\"/pridat_role\", name=\"addRoles\")
+     */
+    public function addRoles(Request $request): Response
+    {
+        if (!$this->isGranted('ROLE_ADMIN_ADD_ROLES')){
+            return $this->showError('not_allowed_to_do_this');
+        }
+        $result = null;
+        $form = $this->createForm(RoleType::class, $result);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()){
+            $result = $form->getData();
+ //                     var_dump($result);
+            $users = $result['users'];
+            $roles = $result['roles'];
+            //exit();
+            foreach ($users as $userId){
+                $user = $this->userRepository->find($userId);
+                foreach ($roles as $role){
+//                    echo $user . ' - ' . $role . PHP_EOL;
+                   $user->addRole($this->roleRepository->find($role));
+                }
+                $roleUser = $this->roleRepository->findOneByName('ROLE_USER');
+                if($user->getGroups()->contains($roleUser->getName())){
+                    $user->removeRole($roleUser, $this->entityManager);
+                }
+                $this->entityManager->persist($user);
+            }
+
+            $this->entityManager->flush();
+            return $this->redirectToRoute('homepage');
+        }
+
+        return $this->render('add_roles.html.twig', ['form' => $form->createView(), 'users' => $this->userRepository->findAll()]);
+    }"
+	
+	
+      end
+
+      operation 196359 "removeArticle"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "    /**
+     * @Route(\"/tajnost/{id}/delete\", name=\"deleteArticle\", requirements={\"page\"=\"\\d+\"})
+     */
+    public function removeArticle(Request $request, int $id): Response{
+        if (!$this->isGranted('ROLE_CAN_EDIT')){
+            return $this->showError('not_allowed_to_do_this');
+        }
+        $article = $this->articleRepository->find($id);
+        $this->entityManager->remove($article);
+        $this->entityManager->flush();
+        return $this->redirectToRoute('secretInfo');
+    }"
+	
+	
+      end
+
+      operation 196487 "editArticle"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "
+    /**
+     * @Route(\"/tajnost/{id}\", name=\"editArticle\", requirements={\"id\"=\"\\d+\"})
+     */
+    public function editArticle(Request $request, int $id): Response{
+        if (!$this->isGranted('ROLE_CAN_EDIT')){
+            return $this->showError('not_allowed_to_edit_this');
+        }
+        $article = $this->articleRepository->find($id);
+        if ($this->getUser() !== $article->getAuthor() && !$this->isGranted('ROLE_CAN_EDIT')){
+            return $this->showError('not_allowed_to_edit_article');
+        }
+        $TitleForm = $this->createForm(TinyFormType::class, $article);
+        $TitleForm->handleRequest($request);
+
+        if ($TitleForm->isSubmitted() && $TitleForm->isValid()) {
+            $article = $TitleForm->getData();
+            $article->setLastEdited(new DateTime());
+            $this->entityManager->persist($article);
+            $this->entityManager->flush();
+            return $this->redirectToRoute('secretInfo');
+            //return $this->render('information.html.twig');
+        }
+        return $this->render('edit.html.twig', ['form' => $TitleForm->createView()]);
+
+    }"
+	
+	
+      end
+
+      operation 196615 "addArticle"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "    /**
+     * @Route(\"/novy/{page}\", name=\"addArticle\", defaults={\"page\"=\"tajnost\"}, requirements={
+     *     \"page\"=\"tajnost|verejne\"
+     * })
+     */
+    public function addArticle(Request $request, string $page): Response
+    {
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        if (!$this->isGranted('ROLE_CAN_EDIT')){
+            return $this->showError('not_allowed_to_do_this');
+        }
+        $article = new Article();
+        $TitleForm = $this->createForm(TinyFormType::class, $article);
+        $TitleForm->handleRequest($request);
+
+        if ($TitleForm->isSubmitted() && $TitleForm->isValid()) {
+            $article = $TitleForm->getData();
+            $article->setPublished(new DateTime());
+            $article->setLastEdited(new DateTime());
+            $article->setAuthor($this->userRepository->findOneBy(['email' => $this->getUser()->getUserIdentifier()]));
+            $article->setPage($page);
+            $this->entityManager->persist($article);
+            $this->entityManager->flush();
+            return $this->redirectToRoute('secretInfo');
+            //return $this->render('information.html.twig');
+        }
+        return $this->render('edit.html.twig', ['form' => $TitleForm->createView()]);
+    }"
+	
+	
+      end
+
+      operation 196743 "getUser"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "    public function getUser(): ?UserInterface
+    {
+        return $this->userRepository->findOneBy(['email' => parent::getUser()->getUserIdentifier()]);
+    }"
+	
+	
+      end
+
+      operation 196871 "editPage"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "    /**
+     * @Route(\"/admin/{page}\", name=\"editPage\")
+     */
+    public function editPage(Request $request, string $page): Response{
+        if (!$this->isGranted('ROLE_CAN_EDIT')){
+            return $this->showError('not_allowed_to_edit_article');
+        }
+        $message = $this->messagesRepository->findOneBy(['messageId' => $page, 'locale' => $request->getLocale()]);
+        if ($message === null){
+            return $this->showError('not_found');
+        }
+        $pageForm = $this->createForm(TinyFormTypePage::class, $message);
+        $pageForm->handleRequest($request);
+
+        if ($pageForm->isSubmitted() && $pageForm->isValid()) {
+            $message = $pageForm->getData();
+            $this->entityManager->persist($message);
+            $this->entityManager->flush();
+            return $this->redirectToRoute($page);
+            //return $this->render('information.html.twig');
+        }
+        return $this->render('edit.html.twig', ['form' => $pageForm->createView()]);
+
+    }"
+	
+	
+      end
+
+      operation 196999 "addEvent"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "    /**
+     * @Route(\"/pridat_udalost\", name=\"addEvent\")
+     */
+    public function addEvent(Request $request): Response
+    {
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        if (!$this->isGranted('ROLE_CAN_EDIT')){
+            return $this->showError('not_allowed_to_do_this');
+        }
+        $event = new Event();
+        $form = $this->createForm(EventType::class, $event);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $event = $form->getData();
+            $this->entityManager->persist($event);
+            $this->entityManager->flush();
+            return $this->redirectToRoute('calendar');
+        }
+        return $this->render('add_event.html.twig', ['form' => $form->createView()]);
+    }"
+	
+	
+      end
+
+      operation 197127 "editEvent"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "    /**
+     * @Route(\"/udalost/{id}\", name=\"editEvent\", requirements={\"id\"=\"\\d+\"})
+     */
+    public function editEvent(Request $request, int $id): Response{
+        if (!$this->isGranted('ROLE_CAN_EDIT')){
+            return $this->showError('not_allowed_to_edit_this');
+        }
+        $event = $this->eventRepository->find($id);
+
+        $eventForm = $this->createForm(EventType::class, $event);
+        $eventForm->handleRequest($request);
+
+        if ($eventForm->isSubmitted() && $eventForm->isValid()) {
+            $event = $eventForm->getData();
+//            $event->setLastEdited(new DateTime());
+            $this->entityManager->persist($event);
+            $this->entityManager->flush();
+            return $this->redirectToRoute('calendar');
+            //return $this->render('information.html.twig');
+        }
+        return $this->render('edit.html.twig', ['form' => $eventForm->createView()]);
+
+    }"
+	
+	
+      end
+
+      operation 197255 "addSong"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "    /**
+     * @Route(\"/pridat_skladbu\", name=\"addSong\")
+     */
+    public function addSong(Request $request): Response
+    {
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        if (!$this->isGranted('ROLE_CAN_EDIT')){
+            return $this->showError('not_allowed_to_do_this');
+        }
+        $song = new Song();
+        $form = $this->createForm(SongType::class, $song);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $song = $form->getData();
+            $this->entityManager->persist($song);
+            $this->entityManager->flush();
+            return $this->redirectToRoute('songs');
+        }
+        return $this->render('add_song.html.twig', ['form' => $form->createView()]);
+    }"
+	
+	
+      end
+
+      operation 197383 "editSong"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "    /**
+     * @Route(\"/skladba/{id}\", name=\"editSong\", requirements={\"id\"=\"\\d+\"})
+     */
+    public function editSong(Request $request, int $id): Response{
+        if (!$this->isGranted('ROLE_CAN_EDIT')){
+            return $this->showError('not_allowed_to_edit_this');
+        }
+        $song = $this->songRepository->find($id);
+
+        $form = $this->createForm(SongType::class, $song);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $song = $form->getData();
+//            $song->setLastEdited(new DateTime());
+            $this->entityManager->persist($song);
+            $this->entityManager->flush();
+            return $this->redirectToRoute('songs');
+            //return $this->render('information.html.twig');
+        }
+        return $this->render('edit.html.twig', ['form' => $form->createView()]);
+
+    }"
+	
+	
+      end
+
+      operation 197511 "editProfile"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  /**
+     * @Route(\"/uzivatel_upravit/{id}\", name=\"editProfile\", requirements={\"id\"=\"\\d+\"})
+     */
+    public function editProfile(Request $request, int $id): Response
+    {
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        $user_old = $this->userRepository->find($id);
+        if ($this->getUser() !== $user_old && !$this->isGranted('ROLE_APPROVE_MEMBERS')){
+            return $this->showError('not_allowed_to_edit_profile');
+        }
+        $form = $this->createForm(UserType::class, $user_old);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $user = $form->getData();
+//            $user->setPassword($user_old->getPassword());
+            $user->setLastEdited(new DateTime());
+            $this->entityManager->persist($user);
+            $this->entityManager->flush();
+            return $this->redirectToRoute('showProfile', ['id' => $id]);
+        }
+        return $this->render('edit_profile.html.twig', ['form' => $form->createView()]);
+    }"
+	
+	
+      end
+
+      operation 197639 "saveUsers"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "    /**
+     * @Route(\"/save\", name=\"saveUsers\")
+     */
+    public function saveUsers(Request $request)
+    {
+        if ($request->isMethod('POST')) {
+            $selectedUsers = $request->request->get('selectedUsers');
+
+            // Assuming you have a UserRepository class that handles database interactions with users
+
+            foreach ($selectedUsers as $userId) {
+                $user = $this->userRepository->find($userId);
+
+                // Do any additional processing or validation here
+
+                // Save the user to the database
+                $this->entityManager->persist($user);
+                $this->entityManager->flush();
+            }
+
+            // Redirect to the success page
+            return $this->redirectToRoute('homepage');
+        }
+
+        // If the request is not a POST, return an error or redirect to the form page
+        // ...
+        else
+        {
+            return $this->redirectToRoute('addRoles');
+        }
+    }"
+	
+	
+      end
+
+      operation 197767 "searchUsers"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "    /**
+     * @Route(\"/search\", name=\"searchUsers\")
+     */
+    public function searchUsers(Request $request)
+    {
+        // ...
+        $users = $this->userRepository->findAll();
+
+        $json_data = array_map(function($user) {
+            return $user->jsonSerialize();
+        }, $users);
+
+        return $json_data;
+//        $response = new Response($json_data);
+//        $response->headers->set('Content-Type', 'application/json');
+//        return $response;
+    }"
+	
+	
+      end
+
+      operation 197895 "removeRoleFromUser"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "    /**
+     * @Route(\"/remove\", name=\"removeRoleFromUser\")
+     */
+    public function removeRoleFromUser(Request $request)
+    {
+        $roleId = $request->request->get('roleId');
+        $userId = $request->request->get('userId');
+
+        $user = $this->userRepository->find($userId);
+        if (!$user) {
+            return new Response('User not found', Response::HTTP_BAD_REQUEST);
+        }
+
+        $role = $this->roleRepository->find($roleId);
+        if (!$role) {
+            return new Response('Role not found', Response::HTTP_BAD_REQUEST);
+        }
+
+        $user->removeRole($role, $this->entityManager);
+        $this->entityManager->flush();
+
+        return new Response('Role successfully removed', Response::HTTP_OK);
+    }"
+	
+	
+      end
+
+      operation 198023 "__construct"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "    public function __construct(EntityManagerInterface $entityManager, ArticleRepository $articleRepository, UserRepository $userRepository, UserEventRepository $userEventRepository, MessagesRepository $messagesRepository, EventRepository $eventRepository, SongRepository $songRepository, RoleRepository $roleRepository, TranslatorInterface $translator, ViewController $viewController)
+    {
+        parent::__construct($entityManager, $articleRepository, $userRepository, $userEventRepository, $messagesRepository, $eventRepository, $songRepository, $roleRepository, $translator);
+        $this->viewController = $viewController;
+    }"
+	
+	
+      end
+    end
+
+    class 131207 "LoginController"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 130695 // <generalisation>
+	relation 130695 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 130695 // <generalisation>
+	  b parent class_ref 130823 // BaseController
+      end
+
+      operation 134151 "index"
+	public explicit_return_type "Response"
+	nparams 2
+	  param in name "authenticationUtils" explicit_type "AuthenticationUtils"
+	  param in name "request" explicit_type "Request"
+	
+	
+	preserve_php_body_indent php_def "    #[Route('/login', name: 'app_login')]
+    public function index(AuthenticationUtils $authenticationUtils, Request $request): Response
+    {
+        $error = $authenticationUtils->getLastAuthenticationError();
+        $lastUsername = $authenticationUtils->getLastUsername();
+        return $this->render('login/index.html.twig', [
+             'last_username' => $lastUsername,
+             'error'         => $error,
+          ]);
+    }"
+	
+	
+	comment "[Route('/login', name: 'app_login')]"
+      end
+    end
+
+    class 131335 "RegistrationController"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 130823 // <generalisation>
+	relation 130823 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 130823 // <generalisation>
+	  b parent class_ref 130951 // AbstractController
+      end
+
+      operation 195847 "register"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "   #[Route('/register', name: 'app_register')]
+    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager): Response
+    {
+        $user = new User($entityManager);
+        $form = $this->createForm(RegistrationFormType::class, $user);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            // encode the plain password
+            $user->setPassword(
+            $userPasswordHasher->hashPassword(
+                    $user,
+                    $form->get('password')->getData()
+                )
+            );
+            $user->setGroups([$this->roleRepository->findOneByName('ROLE_USER')]);
+
+            $user->setLastEdited(new DateTime());
+
+            $entityManager->persist($user);
+            $entityManager->flush();
+
+            // generate a signed url and email it to the user
+// todo
+//            $this->emailVerifier->sendEmailConfirmation('app_verify_email', $user,
+//                (new TemplatedEmail())
+//                    ->from(new Address('noreply@gaudiumpraha.org', 'Gaudium Web Bot'))
+//                    ->to($user->getEmail())
+//                    ->subject('Please Confirm your Email')
+//                    ->htmlTemplate('registration/confirmation_email.html.twig')
+//            );
+//            // do anything else you need here, like send an email
+
+            return $this->redirectToRoute('homepage');
+        }
+
+
+        return $this->render('registration/register.html.twig', [
+            'registrationForm' => $form->createView(),
+        ]);
+    }"
+	
+	
+      end
+
+      operation 195975 "verifyUserEmail"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "    #[Route('/verify/email', name: 'app_verify_email')]
+    public function verifyUserEmail(Request $request, TranslatorInterface $translator): Response
+    {
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+
+        // validate email confirmation link, sets User::isVerified=true and persists
+        try {
+            $this->emailVerifier->handleEmailConfirmation($request, $this->getUser());
+        } catch (VerifyEmailExceptionInterface $exception) {
+            $this->addFlash('verify_email_error', $translator->trans($exception->getReason(), [], 'VerifyEmailBundle'));
+
+            return $this->redirectToRoute('app_register');
+        }
+
+        // @TODO Change the redirect on success and handle or remove the flash message in your templates
+        $this->addFlash('success', 'Your email address has been verified.');
+
+        return $this->redirectToRoute('aboutUs');
+    }"
 	
 	
       end

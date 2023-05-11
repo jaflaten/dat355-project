@@ -2,36 +2,55 @@ format 222
 
 classcanvas 128007 class_ref 131847 // Article
   classdiagramsettings member_max_width 0 end
-  xyz 244 208 2000
+  xyz 775 675 2000
 end
 classcanvas 128135 class_ref 131975 // Attachment
   classdiagramsettings member_max_width 0 end
-  xyz 467 347 2000
+  xyz 504 354 2000
 end
 classcanvas 128263 class_ref 132103 // Event
   classdiagramsettings member_max_width 0 end
-  xyz 310 512 2000
+  xyz 142 645 2000
 end
 classcanvas 128391 class_ref 132231 // Messages
   classdiagramsettings member_max_width 0 end
-  xyz 97 462 2000
+  xyz 692 369 2000
 end
 classcanvas 128519 class_ref 132359 // Role
   classdiagramsettings member_max_width 0 end
-  xyz 178 674 2000
+  xyz 383 872 2000
 end
 classcanvas 128647 class_ref 132487 // Song
   classdiagramsettings member_max_width 0 end
-  xyz 483 135 2000
+  xyz 139 316 2000
 end
 classcanvas 129415 class_ref 161415 // User
   classdiagramsettings member_max_width 0 end
-  xyz 477 707 2000
+  xyz 548 589 2000
 end
-relationcanvas 129031 relation_ref 145799 // <association>
-  from ref 128391 z 2001 to point 235 573
-  line 129159 z 2001 to ref 128263
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
+relationcanvas 129671 relation_ref 164999 // <association>
+  from ref 128647 z 2001 to ref 128135
+  role_a_pos 431 395 3000 role_b_pos 227 384 3000
+  multiplicity_a_pos 477 420 3000 multiplicity_b_pos 227 409 3000
+end
+relationcanvas 129799 relation_ref 165127 // <association>
+  from ref 128519 z 2001 to ref 129415
+  role_a_pos 490 772 3000 role_b_pos 471 857 3000
+  multiplicity_a_pos 533 797 3000 multiplicity_b_pos 471 882 3000
+end
+relationcanvas 129927 relation_ref 165255 // <association>
+  from ref 128647 z 2001 to ref 128263
+  role_a_pos 191 626 3000 role_b_pos 188 495 3000
+  multiplicity_a_pos 167 626 3000 multiplicity_b_pos 164 495 3000
+end
+relationcanvas 130055 relation_ref 165383 // <association>
+  from ref 128263 z 2001 to ref 129415
+  role_a_pos 481 744 3000 role_b_pos 236 751 3000
+  multiplicity_a_pos 533 769 3000 multiplicity_b_pos 236 776 3000
+end
+relationcanvas 130183 relation_ref 165511 // <association>
+  from ref 129415 z 2001 to ref 128007
+  role_a_pos 684 734 3000 role_b_pos 638 741 3000
+  multiplicity_a_pos 760 759 3000 multiplicity_b_pos 638 766 3000
 end
 end

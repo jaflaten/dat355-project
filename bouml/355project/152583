@@ -1,6 +1,6 @@
 format 222
 "Entity" // foo::bakalarka::src::Entity
-  revision 1
+  revision 2
   modified_by 7 "Mehbeh"
   // class settings
   
@@ -1122,6 +1122,26 @@ ${members}}
 "
 	
 	
+      end
+
+      classrelation 165511 // userRoles (<association>)
+	relation_ref 165127 // <association>
+      end
+
+      classrelation 166023 // userEvents (<association>)
+	relation_ref 165383 // <association>
+      end
+
+      classrelation 166151 // authoredArticles (<association>)
+	relation 165511 ----
+	  a role_name "authoredArticles" multiplicity "*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 166151 // authoredArticles (<association>)
+	  b role_name "authoredBy" multiplicity "1" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 166279 // authoredBy (<association>)
       end
     end
 

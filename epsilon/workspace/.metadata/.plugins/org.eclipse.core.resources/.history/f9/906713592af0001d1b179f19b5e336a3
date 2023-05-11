@@ -1,0 +1,117 @@
+model uml : new EMFModel;
+model newapp = new EMFModel;
+
+pre {
+	uml.load("UML.ecore", modeltocode.xmi);
+	newapp.load("Newapp.ecore", "");
+}
+
+
+rule TransformEvent
+  transform s : UML!Event
+  to t : Newapp!Event {
+	  t.id = s.id;
+	  t.name = s.name;
+	  t.date = s.date;
+	  t.location = s.location;
+	  t.users = s.users;
+	  t.songs = s.songs;
+	  t.programmeLink = s.programmeLink;
+	  t.invitationLink = s.invitationLink;
+	  t.notePublic = s.notePublic;
+	  t.notePrivate = s.notePrivate;
+	  t.timeBegin = s.timeBegin;
+	  t.timeMeet = s.timeMeet;
+  
+}
+
+rule TransformAttachment
+  transform s : UML!Attachment
+  to t : NewApp!Attachment {
+
+  t.id = s.id;
+  t.name = s.name;
+  t.type = s.type;
+  t.link = s.link;
+  t.song = s.song;
+  
+  // Handle complex properties like associations
+  // t.songs = ... 
+}
+
+rule TransformArticle
+  transform s : UML!Article
+  to t : NewApp!Article {
+
+  t.id = s.id;
+  t.title = s.title;
+  t.content = s.content;
+  t.published = s.published;
+  t.lastEdited = s.lastEdited;
+  t.author = s.author;
+  t.page = s.page;
+
+  // Handle complex properties like associations
+  // t.authoredBy = ... 
+}
+
+rule TransformMessages
+  transform s : UML!Messages
+  to t : NewApp!Messages {
+
+  t.id = s.id;
+  t.locale = s.locale;
+  t.page = s.page;
+  t.messageId = s.messageId;
+  t.messageText = s.messageText;
+
+  // Handle complex properties like associations
+  // t.association = ... 
+}
+
+rule TransformRole
+  transform s : UML!Role
+  to t : NewApp!Role {
+
+  t.id = s.id;
+  t.name = s.name;
+  t.users = s.users;
+
+  // Handle complex properties like associations
+  // t.roleUsers = ... 
+}
+
+rule TransformUser
+  transform s : UML!User
+  to t : NewApp!User {
+
+  t.id = s.id;
+  t.email = s.email;
+  t.password = s.password;
+  t.isVerified = s.isVerified;
+  t.groups = s.groups;
+  t.articles = s.articles;
+  t.triVoice = s.triVoice;
+  t.quadroVoice = s.quadroVoice;
+  t.birthday = s.birthday;
+  t.note = s.note;
+  t.phone = s.phone;
+  t.name = s.name;
+  t.surname = s.surname;
+  t.prevSurname = s.prevSurname;
+  t.lastEdited = s.lastEdited;
+  t.entityManager = s.entityManager;
+  t.events = s.events;
+
+  // Handle complex properties like associations
+  // t.userRoles = ... 
+  // t.userEvents = ... 
+  // t.authoredArticles = ... 
+}
+
+
+
+post {
+  simple.store("transformed/MyModel.xmi");
+}
+

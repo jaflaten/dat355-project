@@ -2,26 +2,31 @@ window_sizes 1718 1378 659 1054 1228 104
 
 diagrams
   classdiagram_ref 128007 // entities
-    725 1006 100 A4 155 0
+    923 1107 100 A4 113 0
   active  sequencediagram_ref 128135 // sequence of something
     972 1006 100 A4 0 0
 end
 show_stereotypes
-selected class_ref 164231 // RoleRepository
+selected class_ref 131335 // RegistrationController
 open
+  
+  package_ref 134663 // config
   deploymentview_ref 128647 // Controller
   class_ref 131207 // LoginController
   classview_ref 128775 // Repository
+  deploymentview_ref 129159 // Repository
   deploymentview_ref 128903 // Entity
-  classview_ref 128903 // Entity
-  classview_ref 135815 // 355classview
+  class_ref 131847 // Article
+  class_ref 132103 // Event
+  class_ref 132231 // Messages
+  class_ref 132487 // Song
+  class_ref 132615 // User
+  sequencediagram_ref 128135 // sequence of something
   classview_ref 144135 // Command
   classview_ref 144263 // Controller
   classview_ref 144519 // Repository
   deploymentview_ref 145287 // Repository
-  class_ref 160775 // Attachment
-  class_ref 160903 // Event
-  class_ref 161415 // User
+  class_ref 161799 // UserEvent
   classview_ref 145031 // interface
   classview_ref 145159 // Forms
 end

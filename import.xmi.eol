@@ -1,0 +1,4 @@
+var xmi : new XMI!XMIModel;
+xmi.metamodelFile = "<path-to-metamodel>";
+xmi.modelFile = "<path-to-metamodel>";
+xmi.load();
